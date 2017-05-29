@@ -1,0 +1,6 @@
+[submodule "src/libs/Optional"]
+	path = src/libs/Optional
+	url = https://github.com/animber-coder/Optional.git
+[submodule "src/libs/Signals"]
+	path = src/libs/Signals
+	url = https://github.com/animber-coder/Signals.git
