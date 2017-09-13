@@ -1,0 +1,3 @@
+[submodule "libs/Signals"]
+	path = libs/Signals
+	url = https://github.com/animber-coder/Signals
