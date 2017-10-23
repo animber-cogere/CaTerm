@@ -2,3 +2,7 @@
 	path = libs/Signals
 	url = https://github.com/animber-coder/Signals
 	branch = master
+[submodule "demos/chess"]
+	path = demos/chess
+	url = https://github.com/animber-coder/Chess-curses.git
+	branch = master
