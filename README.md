@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/animber-coder/CPPurses.svg?branch=master)](https://travis-ci.org/animber-coder/CPPurses)
+
 # TUI Library
 __CPPurses__ is a Terminal User Interface(TUI) Library built on top of
 [ncurses](https://www.gnu.org/software/ncurses/). It defines a framework of
