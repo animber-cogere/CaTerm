@@ -6,3 +6,6 @@
 	path = demos/chess
 	url = https://github.com/animber-coder/Chess-curses.git
 	branch = master
+[submodule "external/ncurses-snapshots"]
+	path = external/ncurses-snapshots
+	url = https://github.com/animber-coder/ncurses-snapshots.git
