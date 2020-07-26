@@ -1,5 +1,5 @@
 [submodule "libs/Signals"]
-	path = libs/Signals
+	path = external/Signals
 	url = https://github.com/animber-coder/Signals
 	branch = master
 [submodule "demos/chess"]
