@@ -10,3 +10,7 @@ struct Area {
     std::size_t height;  // Vertical
 };
 ```
+
+## See Also
+
+- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Area.html)

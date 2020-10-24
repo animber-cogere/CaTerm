@@ -13,3 +13,7 @@ struct Point {
     std::size_t y = 0;
 };
 ```
+
+## See Also
+
+- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Point.html)
