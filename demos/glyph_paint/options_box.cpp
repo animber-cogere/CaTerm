@@ -3,41 +3,41 @@
 #include <array>
 #include <utility>
 
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/palette/amstrad_cpc.hpp>
-#include <cppurses/painter/palette/apple_ii.hpp>
-#include <cppurses/painter/palette/ashes.hpp>
-#include <cppurses/painter/palette/basic.hpp>
-#include <cppurses/painter/palette/basic8.hpp>
-#include <cppurses/painter/palette/cga.hpp>
-#include <cppurses/painter/palette/commodore_64.hpp>
-#include <cppurses/painter/palette/commodore_vic20.hpp>
-#include <cppurses/painter/palette/dawn_bringer16.hpp>
-#include <cppurses/painter/palette/dawn_bringer32.hpp>
-#include <cppurses/painter/palette/en4.hpp>
-#include <cppurses/painter/palette/gameboy.hpp>
-#include <cppurses/painter/palette/gameboy_pocket.hpp>
-#include <cppurses/painter/palette/macintosh_ii.hpp>
-#include <cppurses/painter/palette/msx.hpp>
-#include <cppurses/painter/palette/nes.hpp>
-#include <cppurses/painter/palette/savanna.hpp>
-#include <cppurses/painter/palette/secam.hpp>
-#include <cppurses/painter/palette/stormy6.hpp>
-#include <cppurses/painter/palette/teletext.hpp>
-#include <cppurses/painter/palette/thomson_m05.hpp>
-#include <cppurses/painter/palette/windows.hpp>
-#include <cppurses/painter/palette/windows_console.hpp>
-#include <cppurses/painter/palette/zx_spectrum.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/terminal/terminal.hpp>
-#include <cppurses/widget/pipe.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/palette/amstrad_cpc.hpp>
+#include <caterm/painter/palette/apple_ii.hpp>
+#include <caterm/painter/palette/ashes.hpp>
+#include <caterm/painter/palette/basic.hpp>
+#include <caterm/painter/palette/basic8.hpp>
+#include <caterm/painter/palette/cga.hpp>
+#include <caterm/painter/palette/commodore_64.hpp>
+#include <caterm/painter/palette/commodore_vic20.hpp>
+#include <caterm/painter/palette/dawn_bringer16.hpp>
+#include <caterm/painter/palette/dawn_bringer32.hpp>
+#include <caterm/painter/palette/en4.hpp>
+#include <caterm/painter/palette/gameboy.hpp>
+#include <caterm/painter/palette/gameboy_pocket.hpp>
+#include <caterm/painter/palette/macintosh_ii.hpp>
+#include <caterm/painter/palette/msx.hpp>
+#include <caterm/painter/palette/nes.hpp>
+#include <caterm/painter/palette/savanna.hpp>
+#include <caterm/painter/palette/secam.hpp>
+#include <caterm/painter/palette/stormy6.hpp>
+#include <caterm/painter/palette/teletext.hpp>
+#include <caterm/painter/palette/thomson_m05.hpp>
+#include <caterm/painter/palette/windows.hpp>
+#include <caterm/painter/palette/windows_console.hpp>
+#include <caterm/painter/palette/zx_spectrum.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/terminal/terminal.hpp>
+#include <caterm/widget/pipe.hpp>
 
 namespace paint {
 
 Options_B::Options_B()
 {
-    using namespace cppurses;
-    using namespace cppurses::pipe;
+    using namespace ox;
+    using namespace ox::pipe;
 
     space1 | wallpaper(L'─');
     palette_label | align_center();

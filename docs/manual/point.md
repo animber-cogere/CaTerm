@@ -16,4 +16,4 @@ struct Point {
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Point.html)
+- [Reference](https://animber-coder.github.io/CaTerm/structox_1_1Point.html)

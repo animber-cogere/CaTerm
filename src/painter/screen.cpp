@@ -1,27 +1,27 @@
-#include <cppurses/painter/detail/screen.hpp>
+#include <caterm/painter/detail/screen.hpp>
 
 #include <iterator>
 #include <mutex>
 
-#include <cppurses/painter/brush.hpp>
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/detail/find_empty_space.hpp>
-#include <cppurses/painter/detail/is_paintable.hpp>
-#include <cppurses/painter/detail/screen_descriptor.hpp>
-#include <cppurses/painter/detail/screen_mask.hpp>
-#include <cppurses/painter/detail/staged_changes.hpp>
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/painter/trait.hpp>
-#include <cppurses/system/detail/focus.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/terminal/output.hpp>
-#include <cppurses/terminal/terminal.hpp>
-#include <cppurses/widget/area.hpp>
-#include <cppurses/widget/point.hpp>
-#include <cppurses/widget/widget.hpp>
+#include <caterm/painter/brush.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/detail/find_empty_space.hpp>
+#include <caterm/painter/detail/is_paintable.hpp>
+#include <caterm/painter/detail/screen_descriptor.hpp>
+#include <caterm/painter/detail/screen_mask.hpp>
+#include <caterm/painter/detail/staged_changes.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/painter/trait.hpp>
+#include <caterm/system/detail/focus.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/terminal/output.hpp>
+#include <caterm/terminal/terminal.hpp>
+#include <caterm/widget/area.hpp>
+#include <caterm/widget/point.hpp>
+#include <caterm/widget/widget.hpp>
 
 namespace {
-using namespace cppurses;
+using namespace ox;
 
 template <typename Map_t>
 auto contains(typename Map_t::key_type const& value, Map_t const& map) -> bool
@@ -99,7 +99,7 @@ void remove_cursor() { System::terminal.show_cursor(false); }
 
 }  // namespace
 
-namespace cppurses::detail {
+namespace ox::detail {
 
 void Screen::flush(Staged_changes::Map_t const& changes)
 {
@@ -126,4 +126,4 @@ void Screen::display_cursor()
         remove_cursor();
 }
 
-}  // namespace cppurses::detail
+}  // namespace ox::detail

@@ -1,4 +1,4 @@
-# CPPurses Manual Index
+# CaTerm Manual Index
 
 ## Introduction
 

@@ -12,4 +12,4 @@ access via `System::terminal`.
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/classcppurses_1_1Terminal.html)
+- [Reference](https://animber-coder.github.io/CaTerm/classox_1_1Terminal.html)

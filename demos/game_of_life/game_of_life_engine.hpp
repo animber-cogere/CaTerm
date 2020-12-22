@@ -1,5 +1,5 @@
-#ifndef CPPURSES_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
-#define CPPURSES_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
+#ifndef CATERM_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
+#define CATERM_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
 #include <algorithm>
 #include <cstdint>
 #include <iterator>
@@ -207,4 +207,4 @@ class Game_of_life_engine {
 };
 
 }  // namespace gol
-#endif  // CPPURSES_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
+#endif  // CATERM_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP

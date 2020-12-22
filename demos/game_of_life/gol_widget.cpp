@@ -8,11 +8,11 @@
 #include <string>
 #include <vector>
 
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/system/key.hpp>
-#include <cppurses/system/mouse.hpp>
-#include <cppurses/widget/point.hpp>
-#include <cppurses/widget/widget.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/system/key.hpp>
+#include <caterm/system/mouse.hpp>
+#include <caterm/widget/point.hpp>
+#include <caterm/widget/widget.hpp>
 
 #include "cell.hpp"
 #include "colors.hpp"
@@ -44,7 +44,7 @@ void apply(bool hi_res, Coordinate offset, Container_t& cells)
 
 }  // namespace
 
-using namespace cppurses;
+using namespace ox;
 namespace gol {
 
 void GoL_widget::import_file(std::string const& filename)

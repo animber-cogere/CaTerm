@@ -156,4 +156,4 @@ There are 24 pre-defined palettes in the library:
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Color.html)
+- [Reference](https://animber-coder.github.io/CaTerm/structox_1_1Color.html)

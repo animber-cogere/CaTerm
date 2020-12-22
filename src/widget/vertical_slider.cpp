@@ -1,14 +1,14 @@
-#include <cppurses/widget/widgets/vertical_slider.hpp>
+#include <caterm/widget/widgets/vertical_slider.hpp>
 
 #include <cmath>
 #include <cstddef>
 
-#include <cppurses/painter/glyph_string.hpp>
-#include <cppurses/painter/painter.hpp>
-#include <cppurses/system/mouse.hpp>
-#include <cppurses/widget/widgets/detail/nearly_equal.hpp>
+#include <caterm/painter/glyph_string.hpp>
+#include <caterm/painter/painter.hpp>
+#include <caterm/system/mouse.hpp>
+#include <caterm/widget/widgets/detail/nearly_equal.hpp>
 
-namespace cppurses {
+namespace ox {
 
 auto Vertical_slider::paint_event() -> bool
 {
@@ -99,4 +99,4 @@ auto Vertical_slider::indicator_index() const -> std::size_t
     return indicator_n % indicator_.size();
 }
 
-}  // namespace cppurses
+}  // namespace ox

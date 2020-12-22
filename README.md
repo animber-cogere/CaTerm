@@ -1,6 +1,6 @@
-[![Build Status](https://github.com/animber-coder/CPPurses/workflows/build/badge.svg)](https://github.com/animber-coder/CPPurses/actions?query=workflow%3Abuild)
+[![Build Status](https://github.com/animber-coder/CaTerm/workflows/build/badge.svg)](https://github.com/animber-coder/CaTerm/actions?query=workflow%3Abuild)
 [![Read the Manual](https://img.shields.io/badge/-Manual-yellow.svg)](docs/manual/index.md)
-[![Read the Reference](https://img.shields.io/badge/-API%20Reference-blue.svg)](https://animber-coder.github.io/CPPurses/hierarchy.html)
+[![Read the Reference](https://img.shields.io/badge/-API%20Reference-blue.svg)](https://animber-coder.github.io/CaTerm/hierarchy.html)
 
 # CaTerm 🐂
 
@@ -19,7 +19,7 @@ Widget and Layout types that can be pieced together to create a composite
 interface. It's easy to expand on top of these types to create new Widgets and
 Layouts.
 
-This project was previously named CPPurses.
+This project was previously named **CPPurses**.
 
 ## Usage
 

@@ -13,4 +13,4 @@ struct Area {
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Area.html)
+- [Reference](https://animber-coder.github.io/CaTerm/structox_1_1Area.html)

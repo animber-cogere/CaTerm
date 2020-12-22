@@ -1,4 +1,4 @@
-#include <cppurses/terminal/input.hpp>
+#include <caterm/terminal/input.hpp>
 
 #include <cstddef>
 #include <optional>
@@ -9,19 +9,19 @@
 #include <ncursesw/ncurses.h>
 #undef border
 
-#include <cppurses/system/detail/find_widget_at.hpp>
-#include <cppurses/system/detail/focus.hpp>
-#include <cppurses/system/event.hpp>
-#include <cppurses/system/key.hpp>
-#include <cppurses/system/mouse.hpp>
-#include <cppurses/system/shortcuts.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/widget/area.hpp>
-#include <cppurses/widget/point.hpp>
-#include <cppurses/widget/widget.hpp>
+#include <caterm/system/detail/find_widget_at.hpp>
+#include <caterm/system/detail/focus.hpp>
+#include <caterm/system/event.hpp>
+#include <caterm/system/key.hpp>
+#include <caterm/system/mouse.hpp>
+#include <caterm/system/shortcuts.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/widget/area.hpp>
+#include <caterm/widget/point.hpp>
+#include <caterm/widget/widget.hpp>
 
 namespace {
-using namespace cppurses;
+using namespace ox;
 
 /// Check if mouse_event is a button_mask type of event.
 template <typename Mask_t>
@@ -159,7 +159,7 @@ auto make_keyboard_event(int input) -> std::optional<Event>
 
 }  // namespace
 
-namespace cppurses::input {
+namespace ox::input {
 
 auto get() -> std::optional<Event>
 {
@@ -172,4 +172,4 @@ auto get() -> std::optional<Event>
     }
 }
 
-}  // namespace cppurses::input
+}  // namespace ox::input

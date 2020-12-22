@@ -1,10 +1,10 @@
-#include <cppurses/widget/border.hpp>
+#include <caterm/widget/border.hpp>
 
 #include <cstddef>
 
-#include <cppurses/painter/glyph.hpp>
+#include <caterm/painter/glyph.hpp>
 
-namespace cppurses {
+namespace ox {
 
 void Border::Segments::disable_all()
 {
@@ -49,4 +49,4 @@ void Border::Segments::disable_sides()
     east.disable();
     west.disable();
 }
-}  // namespace cppurses
+}  // namespace ox

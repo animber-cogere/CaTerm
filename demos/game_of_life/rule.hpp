@@ -1,5 +1,5 @@
-#ifndef CPPURSES_DEMOS_GAME_OF_LIFE_RULE_HPP
-#define CPPURSES_DEMOS_GAME_OF_LIFE_RULE_HPP
+#ifndef CATERM_DEMOS_GAME_OF_LIFE_RULE_HPP
+#define CATERM_DEMOS_GAME_OF_LIFE_RULE_HPP
 #include <bitset>
 #include <sstream>
 #include <stdexcept>
@@ -96,4 +96,4 @@ inline auto to_rule_string(Rule r) -> std::string
 }
 
 }  // namespace gol
-#endif  // CPPURSES_DEMOS_GAME_OF_LIFE_RULE_HPP
+#endif  // CATERM_DEMOS_GAME_OF_LIFE_RULE_HPP

@@ -1,13 +1,13 @@
-#include <cppurses/system/detail/user_input_event_loop.hpp>
+#include <caterm/system/detail/user_input_event_loop.hpp>
 
 #include <optional>
 #include <utility>
 
-#include <cppurses/system/event.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/terminal/input.hpp>
+#include <caterm/system/event.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/terminal/input.hpp>
 
-namespace cppurses::detail {
+namespace ox::detail {
 
 void User_input_event_loop::loop_function()
 {
@@ -15,4 +15,4 @@ void User_input_event_loop::loop_function()
         System::post_event(std::move(*event));
 }
 
-}  // namespace cppurses::detail
+}  // namespace ox::detail

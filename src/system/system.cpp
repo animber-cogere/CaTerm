@@ -1,4 +1,4 @@
-#include <cppurses/system/system.hpp>
+#include <caterm/system/system.hpp>
 
 #include <algorithm>
 #include <iterator>
@@ -11,24 +11,24 @@
 
 #include <signals_light/signal.hpp>
 
-#include <cppurses/system/animation_engine.hpp>
-#include <cppurses/system/detail/event_engine.hpp>
-#include <cppurses/system/detail/event_queue.hpp>
-#include <cppurses/system/detail/filter_send.hpp>
-#include <cppurses/system/detail/focus.hpp>
-#include <cppurses/system/detail/is_sendable.hpp>
-#include <cppurses/system/detail/send.hpp>
-#include <cppurses/system/detail/user_input_event_loop.hpp>
-#include <cppurses/system/event.hpp>
-#include <cppurses/system/event_loop.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/terminal/terminal.hpp>
-#include <cppurses/widget/area.hpp>
-#include <cppurses/widget/widget.hpp>
+#include <caterm/system/animation_engine.hpp>
+#include <caterm/system/detail/event_engine.hpp>
+#include <caterm/system/detail/event_queue.hpp>
+#include <caterm/system/detail/filter_send.hpp>
+#include <caterm/system/detail/focus.hpp>
+#include <caterm/system/detail/is_sendable.hpp>
+#include <caterm/system/detail/send.hpp>
+#include <caterm/system/detail/user_input_event_loop.hpp>
+#include <caterm/system/event.hpp>
+#include <caterm/system/event_loop.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/terminal/terminal.hpp>
+#include <caterm/widget/area.hpp>
+#include <caterm/widget/widget.hpp>
 
-namespace cppurses {
+namespace ox {
 
-auto System::focus_widget() -> cppurses::Widget*
+auto System::focus_widget() -> Widget*
 {
     return detail::Focus::focus_widget();
 }
@@ -107,4 +107,4 @@ Animation_engine System::animation_engine_;
 sl::Signal<void(int)> System::exit_signal;
 detail::User_input_event_loop System::user_input_loop_;
 
-}  // namespace cppurses
+}  // namespace ox

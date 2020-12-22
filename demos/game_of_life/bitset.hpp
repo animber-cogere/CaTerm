@@ -1,5 +1,5 @@
-#ifndef CPPURSES_DEMOS_GAME_OF_LIFE_BITSET_HPP
-#define CPPURSES_DEMOS_GAME_OF_LIFE_BITSET_HPP
+#ifndef CATERM_DEMOS_GAME_OF_LIFE_BITSET_HPP
+#define CATERM_DEMOS_GAME_OF_LIFE_BITSET_HPP
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
@@ -179,4 +179,4 @@ class Bitset {
 };
 
 }  // namespace gol
-#endif  // CPPURSES_DEMOS_GAME_OF_LIFE_BITSET_HPP
+#endif  // CATERM_DEMOS_GAME_OF_LIFE_BITSET_HPP

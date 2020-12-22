@@ -45,5 +45,5 @@ auto const bg_blue_x = L'X' | bg(Color::Blue);
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/structcppurses_1_1Glyph.html)
+- [Reference](https://animber-coder.github.io/CaTerm/structox_1_1Glyph.html)
 - [Brush](brush.md)

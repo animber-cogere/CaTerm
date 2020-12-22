@@ -1,5 +1,5 @@
-#ifndef CPPURSES_DEMOS_GAME_OF_LIFE_FILETYPE_HPP
-#define CPPURSES_DEMOS_GAME_OF_LIFE_FILETYPE_HPP
+#ifndef CATERM_DEMOS_GAME_OF_LIFE_FILETYPE_HPP
+#define CATERM_DEMOS_GAME_OF_LIFE_FILETYPE_HPP
 #include <string>
 
 namespace gol {
@@ -13,4 +13,4 @@ FileType get_filetype(const std::string& filename);
 std::string get_extension(const std::string& filename);
 
 }  // namespace gol
-#endif  // CPPURSES_DEMOS_GAME_OF_LIFE_FILETYPE_HPP
+#endif  // CATERM_DEMOS_GAME_OF_LIFE_FILETYPE_HPP

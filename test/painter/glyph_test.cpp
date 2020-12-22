@@ -1,18 +1,18 @@
-#include <cppurses/painter/brush.hpp>
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/painter/trait.hpp>
+#include <caterm/painter/brush.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/painter/trait.hpp>
 
 #include <gtest/gtest.h>
 
 #include <string>
 
-using cppurses::background;
-using cppurses::Brush;
-using cppurses::Color;
-using cppurses::foreground;
-using cppurses::Glyph;
-using cppurses::Trait;
+using ox::background;
+using ox::Brush;
+using ox::Color;
+using ox::foreground;
+using ox::Glyph;
+using ox::Trait;
 
 std::string foo(const Glyph& g) { return g.str(); }
 

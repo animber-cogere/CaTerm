@@ -1,19 +1,19 @@
-#include <cppurses/widget/widgets/line_edit.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 
 #include <cctype>
 #include <functional>
 #include <utility>
 #include <vector>
 
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/painter/glyph_string.hpp>
-#include <cppurses/painter/trait.hpp>
-#include <cppurses/system/key.hpp>
-#include <cppurses/widget/point.hpp>
-#include <cppurses/widget/widgets/textbox.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/painter/glyph_string.hpp>
+#include <caterm/painter/trait.hpp>
+#include <caterm/system/key.hpp>
+#include <caterm/widget/point.hpp>
+#include <caterm/widget/widgets/textbox.hpp>
 
-namespace cppurses {
+namespace ox {
 
 void Line_edit::underline(bool enabled)
 {
@@ -69,4 +69,4 @@ auto Line_edit::key_press_event(Key k) -> bool
     return Textbox::key_press_event(k);
 }
 
-}  // namespace cppurses
+}  // namespace ox

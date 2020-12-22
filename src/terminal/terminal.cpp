@@ -1,4 +1,4 @@
-#include <cppurses/terminal/terminal.hpp>
+#include <caterm/terminal/terminal.hpp>
 
 #include <algorithm>
 #include <chrono>
@@ -18,18 +18,18 @@
 #include <ncursesw/ncurses.h>
 #undef border
 
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/palette/basic.hpp>
-#include <cppurses/painter/palette/basic8.hpp>
-#include <cppurses/painter/palette/dawn_bringer16.hpp>
-#include <cppurses/system/system.hpp>
-#include <cppurses/terminal/input.hpp>
-#include <cppurses/terminal/terminal_error.hpp>
-#include <cppurses/widget/widget.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/palette/basic.hpp>
+#include <caterm/painter/palette/basic8.hpp>
+#include <caterm/painter/palette/dawn_bringer16.hpp>
+#include <caterm/system/system.hpp>
+#include <caterm/terminal/input.hpp>
+#include <caterm/terminal/terminal_error.hpp>
+#include <caterm/widget/widget.hpp>
 
 extern "C" void handle_sigint(int /* sig*/)
 {
-    cppurses::System::terminal.uninitialize();
+    ox::System::terminal.uninitialize();
 #if !defined __APPLE__ && !defined __MINGW32__
     std::quick_exit(0);
 #else
@@ -38,7 +38,7 @@ extern "C" void handle_sigint(int /* sig*/)
 }
 
 namespace {
-using namespace cppurses;
+using namespace ox;
 
 auto scale(RGB::Value_t value) -> short
 {
@@ -50,7 +50,7 @@ auto scale(RGB::Value_t value) -> short
 
 }  // namespace
 
-namespace cppurses {
+namespace ox {
 
 void Terminal::initialize()
 {
@@ -298,4 +298,4 @@ void Terminal::repaint_all()
         d->update();
 }
 
-}  // namespace cppurses
+}  // namespace ox

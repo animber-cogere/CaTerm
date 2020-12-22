@@ -32,6 +32,6 @@ the only thread that processes the Event Queue.
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/classcppurses_1_1Event__loop.html)
+- [Reference](https://animber-coder.github.io/CaTerm/classox_1_1Event__loop.html)
 - [System](system.md)
 - [Events](events.md)

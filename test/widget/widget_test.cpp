@@ -1,4 +1,4 @@
-#include <widget/widget.hpp>
+#include <caterm/widget/widget.hpp>
 
 #include <gtest/gtest.h>
 

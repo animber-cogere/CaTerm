@@ -1,9 +1,9 @@
-#include <cppurses/system/event_loop.hpp>
+#include <caterm/system/event_loop.hpp>
 
-#include <cppurses/system/detail/event_engine.hpp>
-#include <cppurses/system/system.hpp>
+#include <caterm/system/detail/event_engine.hpp>
+#include <caterm/system/system.hpp>
 
-namespace cppurses {
+namespace ox {
 
 auto Event_loop::run() -> int
 {
@@ -28,4 +28,4 @@ void Event_loop::connect_to_system_exit()
     System::exit_signal.connect(exit_loop);
 }
 
-}  // namespace cppurses
+}  // namespace ox

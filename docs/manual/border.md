@@ -112,4 +112,4 @@ These do not enable the border to display automatically.
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/classcppurses_1_1Border.html)
+- [Reference](https://animber-coder.github.io/CaTerm/classox_1_1Border.html)

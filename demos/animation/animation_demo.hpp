@@ -1,23 +1,23 @@
-#ifndef CPPURSES_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
-#define CPPURSES_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/painter/painter.hpp>
-#include <cppurses/system/mouse.hpp>
-#include <cppurses/widget/layouts/horizontal.hpp>
-#include <cppurses/widget/pipe.hpp>
-#include <cppurses/widget/point.hpp>
-#include <cppurses/widget/widget.hpp>
+#ifndef CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
+#define CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/painter/painter.hpp>
+#include <caterm/system/mouse.hpp>
+#include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/pipe.hpp>
+#include <caterm/widget/point.hpp>
+#include <caterm/widget/widget.hpp>
 
 namespace demos::animation {
 
 /// Box containing an 'x' character that bounces off the Widget's walls.
-class Animated_box : public cppurses::Widget {
+class Animated_box : public ox::Widget {
    public:
     /// Initialize with the frames-per-second the animation will happen in.
-    explicit Animated_box(cppurses::FPS fps) : fps_{fps}
+    explicit Animated_box(ox::FPS fps) : fps_{fps}
     {
-        *this | cppurses::pipe::strong_focus();
+        *this | ox::pipe::strong_focus();
     }
 
    protected:
@@ -31,7 +31,7 @@ class Animated_box : public cppurses::Widget {
 
     auto paint_event() -> bool override
     {
-        cppurses::Painter{*this}.put(glyph_, xy_);
+        ox::Painter{*this}.put(glyph_, xy_);
         return Widget::paint_event();
     }
 
@@ -47,15 +47,14 @@ class Animated_box : public cppurses::Widget {
         return Widget::disable_event();
     }
 
-    auto mouse_press_event(const cppurses::Mouse& m) -> bool override
+    auto mouse_press_event(const ox::Mouse& m) -> bool override
     {
         xy_ = m.local;
         this->update();
         return Widget::mouse_press_event(m);
     }
 
-    auto resize_event(cppurses::Area new_size, cppurses::Area old_size)
-        -> bool override
+    auto resize_event(ox::Area new_size, ox::Area old_size) -> bool override
     {
         reset(xy_.x, this->width());
         reset(xy_.y, this->height());
@@ -63,12 +62,12 @@ class Animated_box : public cppurses::Widget {
     }
 
    private:
-    cppurses::FPS const fps_;
+    ox::FPS const fps_;
 
-    cppurses::Glyph glyph_ = L'X' | fg(cppurses::Color::Yellow);
-    cppurses::Point xy_    = cppurses::Point{0uL, 0uL};
-    int x_direction_       = 1;
-    int y_direction_       = 1;
+    ox::Glyph glyph_ = L'X' | fg(ox::Color::Yellow);
+    ox::Point xy_    = ox::Point{0uL, 0uL};
+    int x_direction_ = 1;
+    int y_direction_ = 1;
 
    private:
     /// Increments by \p direction, if 0 or \p max, flips the direction.
@@ -96,9 +95,9 @@ class Animated_box : public cppurses::Widget {
 };
 
 /// Contains a few Animated_boxes at various animation rates.
-inline auto build_demo() -> std::unique_ptr<cppurses::Widget>
+inline auto build_demo() -> std::unique_ptr<ox::Widget>
 {
-    using namespace cppurses;
+    using namespace ox;
     return layout::horizontal<Animated_box>(
         std::make_unique<Animated_box>(FPS{5}),
         std::make_unique<Animated_box>(FPS{10}) | pipe::bordered(),
@@ -108,4 +107,4 @@ inline auto build_demo() -> std::unique_ptr<cppurses::Widget>
 }
 
 }  // namespace demos::animation
-#endif  // CPPURSES_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
+#endif  // CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP

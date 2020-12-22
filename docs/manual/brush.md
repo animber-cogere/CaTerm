@@ -61,7 +61,7 @@ Removes all Traits, not Colors.
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/classcppurses_1_1Brush.html)
+- [Reference](https://animber-coder.github.io/CaTerm/classox_1_1Brush.html)
 - [Traits](traits.md)
 - [Colors](colors.md)
 - [Wallpaper](wallpaper.md)

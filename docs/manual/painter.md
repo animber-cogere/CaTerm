@@ -46,4 +46,4 @@ bool paint_event() override
 
 ## See Also
 
-- [Reference](https://animber-coder.github.io/CPPurses/classcppurses_1_1Painter.html)
+- [Reference](https://animber-coder.github.io/CaTerm/classox_1_1Painter.html)

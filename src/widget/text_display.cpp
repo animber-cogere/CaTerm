@@ -1,4 +1,4 @@
-#include <cppurses/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_display.hpp>
 
 #include <algorithm>
 #include <cstddef>
@@ -8,12 +8,12 @@
 
 #include <iostream>  //temp
 
-#include <cppurses/painter/glyph_string.hpp>
-#include <cppurses/painter/painter.hpp>
-#include <cppurses/painter/trait.hpp>
-#include <cppurses/widget/point.hpp>
+#include <caterm/painter/glyph_string.hpp>
+#include <caterm/painter/painter.hpp>
+#include <caterm/painter/trait.hpp>
+#include <caterm/widget/point.hpp>
 
-namespace cppurses {
+namespace ox {
 
 void Text_display::insert(Glyph_string text, std::size_t index)
 {
@@ -228,4 +228,4 @@ auto Text_display::line_at(std::size_t index) const -> std::size_t
     return this->last_line();
 }
 
-}  // namespace cppurses
+}  // namespace ox

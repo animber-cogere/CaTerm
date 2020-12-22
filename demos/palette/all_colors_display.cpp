@@ -1,17 +1,17 @@
 #include "all_colors_display.hpp"
 
-#include <cppurses/painter/color.hpp>
-#include <cppurses/painter/glyph.hpp>
-#include <cppurses/painter/painter.hpp>
+#include <caterm/painter/color.hpp>
+#include <caterm/painter/glyph.hpp>
+#include <caterm/painter/painter.hpp>
 
 namespace palette {
 
 bool Shade_display::paint_event()
 {
-    using namespace cppurses;
+    using namespace ox;
     auto light_shade   = L'░' | bg(base_);
     auto mid_shade     = L'▒' | bg(base_);
-    auto const color_n = cppurses::System::terminal.get_palette_color_count();
+    auto const color_n = ox::System::terminal.get_palette_color_count();
 
     int const height = static_cast<int>(this->height());
     int const width  = static_cast<int>(this->width());

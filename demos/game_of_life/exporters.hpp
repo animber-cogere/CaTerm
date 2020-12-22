@@ -1,5 +1,5 @@
-#ifndef CPPURSES_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP
-#define CPPURSES_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP
+#ifndef CATERM_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP
+#define CATERM_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP
 #include <string>
 
 #include "game_of_life_engine.hpp"
@@ -23,4 +23,4 @@ void export_as_rle(const std::string& filename,
                    const Game_of_life_engine& engine);
 
 }  // namespace gol
-#endif  // CPPURSES_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP
+#endif  // CATERM_DEMOS_GAME_OF_LIFE_EXPORTERS_HPP

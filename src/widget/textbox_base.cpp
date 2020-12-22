@@ -1,12 +1,11 @@
-#include <cppurses/widget/widgets/detail/textbox_base.hpp>
+#include <caterm/widget/widgets/detail/textbox_base.hpp>
 
 #include <cstddef>
 
-#include <cppurses/painter/glyph_string.hpp>
-#include <cppurses/widget/widgets/text_display.hpp>
+#include <caterm/painter/glyph_string.hpp>
+#include <caterm/widget/widgets/text_display.hpp>
 
-namespace cppurses {
-namespace detail {
+namespace ox::detail {
 
 void Textbox_base::cursor_up(std::size_t n)
 {
@@ -47,5 +46,4 @@ auto Textbox_base::resize_event(Area new_size, Area old_size) -> bool
     return Text_display::resize_event(new_size, old_size);
 }
 
-}  // namespace detail
-}  // namespace cppurses
+}  // namespace ox::detail
