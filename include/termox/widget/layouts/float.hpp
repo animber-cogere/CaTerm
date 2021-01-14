@@ -3,6 +3,7 @@
 #include <utility>
 
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/widget.hpp>
 
 namespace ox {
@@ -44,6 +45,12 @@ class Float : public Layout_t<Widget> {
         }
     }
 };
+
+// TODO Create Passive layout modifier and remove the passive bool in size
+// policy
+template <typename Widget_t>
+using Float_2d = ox::Float<ox::Float<Widget_t, ox::layout::Horizontal>,
+                           ox::layout::Vertical>;
 
 }  // namespace ox
 #endif  //
