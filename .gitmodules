@@ -4,3 +4,6 @@
 [submodule "external/signals-light"]
 	path = external/signals-light
 	url = https://github.com/animber-coder/signals-light.git
+[submodule "external/Escape"]
+	path = external/Escape
+	url = https://github.com/animber-coder/Escape.git
