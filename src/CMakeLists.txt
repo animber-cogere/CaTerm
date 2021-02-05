@@ -12,9 +12,9 @@ find_package(Threads REQUIRED)
 target_link_libraries(CaTerm
     PUBLIC
         signals-light
-        ${CMAKE_THREAD_LIBS_INIT}
     PRIVATE
         nc
+        ${CMAKE_THREAD_LIBS_INIT}
 )
 
 target_include_directories(CaTerm PUBLIC ${PROJECT_SOURCE_DIR}/include)

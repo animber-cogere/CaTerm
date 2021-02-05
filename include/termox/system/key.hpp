@@ -1,6 +1,6 @@
 #ifndef CATERM_SYSTEM_KEY_HPP
 #define CATERM_SYSTEM_KEY_HPP
-#include <cstdint>
+#include <cstddef>
 #include <functional>
 #include <type_traits>
 
