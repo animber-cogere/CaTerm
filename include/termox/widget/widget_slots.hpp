@@ -5,10 +5,10 @@
 #include <caterm/painter/color.hpp>
 #include <caterm/system/key.hpp>
 #include <caterm/system/mouse.hpp>
+#include <caterm/widget/point.hpp>
 
 namespace ox {
 class Widget;
-struct Point;
 }  // namespace ox
 
 namespace ox::slot {

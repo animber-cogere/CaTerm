@@ -9,10 +9,10 @@
 #include <caterm/painter/brush.hpp>
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/widget/align.hpp>
+#include <caterm/widget/point.hpp>
 #include <caterm/widget/widget.hpp>
 
 namespace ox {
-struct Point;
 
 /// Non-interactive box to display a given Glyph_string.
 /** Provides operations to change the text, wrap words on spaces, change the

@@ -9,12 +9,9 @@
 #include <caterm/common/transform_view.hpp>
 #include <caterm/system/event.hpp>
 #include <caterm/system/system.hpp>
+#include <caterm/widget/area.hpp>
+#include <caterm/widget/point.hpp>
 #include <caterm/widget/widget.hpp>
-
-namespace ox {
-struct Area;
-struct Point;
-}  // namespace ox
 
 namespace ox::layout {
 

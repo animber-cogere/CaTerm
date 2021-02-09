@@ -1,11 +1,22 @@
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
+# UI Tests
+
 # Checkbox
-add_executable(checkbox EXCLUDE_FROM_ALL checkbox.test.cpp)
-target_link_libraries(checkbox PRIVATE CaTerm)
+add_executable(checkbox.ui.test EXCLUDE_FROM_ALL checkbox.ui.test.cpp)
+target_link_libraries(checkbox.ui.test PRIVATE CaTerm)
 
 add_custom_target(
-    caterm-tests
+    caterm-ui-tests
     DEPENDS
-        checkbox
+        checkbox.ui.test
 )
+
+# Unit Tests
+add_executable(caterm.unit.tests EXCLUDE_FROM_ALL
+    catch2.main.cpp
+    glyph_string.test.cpp
+)
+
+# Catch2::Catch2 relies on signals-light defining that target
+target_link_libraries(caterm.unit.tests PRIVATE CaTerm Catch2::Catch2)

@@ -1,6 +1,9 @@
 #ifndef CATERM_HPP
 #define CATERM_HPP
 
+#include <caterm/common/mb_to_u32.hpp>
+#include <caterm/common/u32_to_mb.hpp>
+
 #include <caterm/painter/brush.hpp>
 #include <caterm/painter/color.hpp>
 #include <caterm/painter/glyph.hpp>
@@ -8,7 +11,6 @@
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/painter/painter.hpp>
 #include <caterm/painter/trait.hpp>
-#include <caterm/painter/utility/wchar_to_bytes.hpp>
 
 #include <caterm/system/key.hpp>
 #include <caterm/system/mouse.hpp>
