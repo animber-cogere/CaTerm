@@ -1,9 +1,11 @@
 #ifndef CATERM_SYSTEM_DETAIL_SEND_HPP
 #define CATERM_SYSTEM_DETAIL_SEND_HPP
 #include <caterm/painter/detail/is_paintable.hpp>
+#include <caterm/painter/painter.hpp>
 #include <caterm/system/detail/focus.hpp>
 #include <caterm/system/event.hpp>
 #include <caterm/system/key.hpp>
+#include <caterm/system/system.hpp>
 #include <caterm/widget/area.hpp>
 #include <caterm/widget/widget.hpp>
 
@@ -12,22 +14,15 @@ namespace ox::detail {
 inline void send(ox::Paint_event e)
 {
     if (is_paintable(e.receiver)) {
-        // TODO
-        // Create
-        // auto p = Painter{e.receiver};
-        // e.receiver.get().paint_event(p);
-        e.receiver.get().paint_event();
+        auto p = Painter{e.receiver, System::terminal.screen_buffers.next};
+        e.receiver.get().paint_event(p);
     }
 }
 
 inline void send(ox::Key_press_event e)
 {
-    e.receiver.get().key_press_event(e.key);
-    switch (e.key) {
-        case Key::Tab: detail::Focus::tab_press(); break;
-        case Key::Back_tab: detail::Focus::shift_tab_press(); break;
-        default: break;
-    }
+    if (e.receiver)
+        e.receiver->get().key_press_event(e.key);
 }
 
 inline void send(ox::Mouse_press_event e)
@@ -116,7 +111,7 @@ inline void send(ox::Resize_event e)
     if (old_area == new_area)
         return;
     e.receiver.get().set_outer_area(new_area);
-    e.receiver.get().screen_state().resize(new_area);
+    // e.receiver.get().screen_state().resize(new_area);
     e.receiver.get().resize_event(new_area, old_area);
 }
 

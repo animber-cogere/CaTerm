@@ -1,9 +1,6 @@
 #ifndef CATERM_DEMOS_PALETTE_PALETTE_HELPERS_HPP
 #define CATERM_DEMOS_PALETTE_PALETTE_HELPERS_HPP
-#include <cstdint>
-
 #include <caterm/painter/color.hpp>
-// #include <caterm/painter/palette.hpp>
 
 namespace palette {
 namespace detail {

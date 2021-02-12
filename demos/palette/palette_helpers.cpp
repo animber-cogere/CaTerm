@@ -1,12 +1,9 @@
 #include "palette_helpers.hpp"
 
 #include <algorithm>
-#include <cstdint>
 #include <iterator>
 
 #include <caterm/painter/color.hpp>
-// #include <caterm/painter/palette.hpp>
-// #include <caterm/painter/rgb.hpp>
 #include <caterm/system/system.hpp>
 #include <caterm/terminal/terminal.hpp>
 

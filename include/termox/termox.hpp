@@ -20,8 +20,6 @@
 #include <caterm/system/shortcuts.hpp>
 #include <caterm/system/system.hpp>
 
-#include <caterm/terminal/input.hpp>
-#include <caterm/terminal/output.hpp>
 #include <caterm/terminal/terminal.hpp>
 
 #include <caterm/widget/layouts/horizontal.hpp>

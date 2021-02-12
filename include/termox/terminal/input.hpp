@@ -1,8 +1,6 @@
 #ifndef CATERM_TERMINAL_INPUT_HPP
 #define CATERM_TERMINAL_INPUT_HPP
-#include <optional>
 
-#include <caterm/system/event.hpp>
 
 namespace ox::input {
 

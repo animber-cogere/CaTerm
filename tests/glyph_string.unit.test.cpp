@@ -1,13 +1,13 @@
-#include <catch2/catch.hpp>
-
 #include <clocale>
+
+#include <catch2/catch.hpp>
 
 #include <caterm/painter/brush.hpp>
 #include <caterm/painter/color.hpp>
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/painter/trait.hpp>
 
-void init() { std::setlocale(LC_ALL, "en_US.UTF-8"); }
+static void init() { std::setlocale(LC_ALL, "en_US.UTF-8"); }
 
 TEST_CASE("Empty Glyph_string function calls", "[Glyph_string]")
 {
