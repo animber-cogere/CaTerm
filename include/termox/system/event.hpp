@@ -2,8 +2,8 @@
 #define CATERM_SYSTEM_EVENT_HPP
 #include <functional>
 #include <memory>
-#include <variant>
 #include <optional>
+#include <variant>
 
 #include <caterm/system/key.hpp>
 #include <caterm/system/mouse.hpp>
