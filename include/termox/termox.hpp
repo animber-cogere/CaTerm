@@ -26,26 +26,37 @@
 #include <caterm/widget/layouts/stack.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 
+#include <caterm/widget/widgets/accordion.hpp>
+#include <caterm/widget/widgets/banner.hpp>
 #include <caterm/widget/widgets/button.hpp>
+#include <caterm/widget/widgets/button_list.hpp>
 #include <caterm/widget/widgets/checkbox.hpp>
 #include <caterm/widget/widgets/color_select.hpp>
 #include <caterm/widget/widgets/confirm_button.hpp>
 #include <caterm/widget/widgets/cycle_box.hpp>
 #include <caterm/widget/widgets/cycle_stack.hpp>
 #include <caterm/widget/widgets/graph.hpp>
+#include <caterm/widget/widgets/hideable.hpp>
+#include <caterm/widget/widgets/horizontal_slider.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/log.hpp>
 #include <caterm/widget/widgets/matrix_display.hpp>
 #include <caterm/widget/widgets/menu.hpp>
 #include <caterm/widget/widgets/menu_stack.hpp>
+#include <caterm/widget/widgets/notify_light.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/open_file.hpp>
 #include <caterm/widget/widgets/save_file.hpp>
+#include <caterm/widget/widgets/scrollbar.hpp>
+#include <caterm/widget/widgets/selectable.hpp>
+#include <caterm/widget/widgets/spinner.hpp>
 #include <caterm/widget/widgets/status_bar.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
 #include <caterm/widget/widgets/textbox.hpp>
+#include <caterm/widget/widgets/tile.hpp>
 #include <caterm/widget/widgets/titlebar.hpp>
+#include <caterm/widget/widgets/toggle_button.hpp>
 #include <caterm/widget/widgets/vertical_slider.hpp>
 
 #include <caterm/widget/area.hpp>
