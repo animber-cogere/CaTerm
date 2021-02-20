@@ -1,6 +1,7 @@
 #ifndef CATERM_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
 #define CATERM_DEMOS_GAME_OF_LIFE_GAME_OF_LIFE_ENGINE_HPP
 #include <algorithm>
+#include <array>
 #include <cstdint>
 #include <iterator>
 #include <unordered_map>
