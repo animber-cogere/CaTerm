@@ -1,7 +1,6 @@
 #include <ios>
 #include <caterm/painter/painter.hpp>
 
-#include <caterm/painter/detail/screen_descriptor.hpp>
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/system/event_loop.hpp>
 #include <caterm/system/system.hpp>

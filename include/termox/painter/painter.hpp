@@ -1,6 +1,5 @@
 #ifndef CATERM_PAINTER_PAINTER_HPP
 #define CATERM_PAINTER_PAINTER_HPP
-#include <caterm/painter/detail/screen_descriptor.hpp>
 #include <caterm/terminal/detail/canvas.hpp>
 #include <caterm/widget/area.hpp>
 #include <caterm/widget/point.hpp>
