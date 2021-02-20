@@ -1,25 +1,6 @@
 #ifndef CATERM_WIDGET_WIDGETS_MENU_HPP
 #define CATERM_WIDGET_WIDGETS_MENU_HPP
 #include <cstddef>
-#include <functional>
-#include <utility>
-#include <vector>
-
-#include <signals_light/signal.hpp>
-
-#include <caterm/painter/glyph_string.hpp>
-#include <caterm/painter/trait.hpp>
-#include <caterm/system/key.hpp>
-#include <caterm/system/mouse.hpp>
-#include <caterm/widget/layouts/horizontal.hpp>
-#include <caterm/widget/layouts/vertical.hpp>
-#include <caterm/widget/pair.hpp>
-#include <caterm/widget/pipe.hpp>
-#include <caterm/widget/widget.hpp>
-#include <caterm/widget/widgets/label.hpp>
-
-// New
-#include <cstddef>
 #include <utility>
 
 #include <signals_light/signal.hpp>
@@ -30,6 +11,7 @@
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/selecting.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
+#include <caterm/widget/pair.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/selectable.hpp>
@@ -41,7 +23,7 @@ class Menu_item : public Selectable<HLabel> {
     sl::Signal<void()> selected;
 
    public:
-    Menu_item(Glyph_string label)
+    explicit Menu_item(Glyph_string label)
     {
         // TODO Selectable should take Widget_t::Parameters if that type exists,
         // in the constructor.
