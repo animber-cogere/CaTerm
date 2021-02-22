@@ -3,6 +3,7 @@
 #include <esc/event.hpp>
 
 #include <caterm/system/event.hpp>
+#include <caterm/widget/widget.hpp>
 
 namespace ox::detail {
 

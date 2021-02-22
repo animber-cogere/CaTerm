@@ -53,7 +53,7 @@ endif()
 # System
 target_sources(CaTerm
     PRIVATE
-        system/event_loop.cpp
+        system/event_queue.cpp
         system/focus.cpp
         system/system.cpp
         system/animation_engine.cpp

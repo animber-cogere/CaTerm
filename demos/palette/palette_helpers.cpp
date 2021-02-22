@@ -6,6 +6,7 @@
 #include <caterm/painter/color.hpp>
 #include <caterm/system/system.hpp>
 #include <caterm/terminal/terminal.hpp>
+#include <caterm/widget/widget.hpp>
 
 using namespace ox;
 
