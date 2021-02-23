@@ -1,5 +1,6 @@
 #ifndef CATERM_WIDGET_LAYOUTS_PASSIVE_HPP
 #define CATERM_WIDGET_LAYOUTS_PASSIVE_HPP
+#include <memory>
 #include <utility>
 
 #include <caterm/widget/detail/border_offset.hpp>
@@ -79,6 +80,14 @@ class Passive : public Layout_t {
             *this | pipe::fixed_width(length);
     }
 };
+
+/// Helper function to create an instance.
+template <typename Layout_t, typename... Args>
+[[nodiscard]] inline auto passive(Args&&... args)
+    -> std::unique_ptr<Passive<Layout_t>>
+{
+    return std::make_unique<Passive<Layout_t>>(std::forward<Args>(args)...);
+}
 
 }  // namespace ox
 #endif  // CATERM_WIDGET_LAYOUTS_PASSIVE_HPP

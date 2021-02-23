@@ -6,7 +6,9 @@
 #include <caterm/widget/array.hpp>
 #include <caterm/widget/layouts/float.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
+#include <caterm/widget/pair.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widgets/button.hpp>
@@ -245,13 +247,17 @@ class Runtime : public ox::layout::Horizontal<> {
 /// Adds a buffer widget as the second Widget in a Layout_t object.
 template <typename Widget_t, template <typename> typename Layout_t>
 class Buf : public Layout_t<ox::Widget> {
-   public:
-    Buf() { *this | ox::pipe::passive_width(); }
+   private:
+    using Base_t = Layout_t<ox::Widget>;
 
-    Buf(std::unique_ptr<Widget_t> w_ptr)
-        : Layout_t<ox::Widget>{std::move(w_ptr)}
+   public:
+    template <typename... Args>
+    Buf(std::unique_ptr<Widget_t> w_ptr) : Base_t{std::move(w_ptr)}
     {
-        *this | ox::pipe::passive_width();
+        if constexpr (ox::layout::is_vertical_v<Layout_t<ox::Widget>>)
+            this->width_policy = this->get_children().front().width_policy;
+        else
+            this->height_policy = this->get_children().front().height_policy;
     }
 
    public:
@@ -265,15 +271,6 @@ template <typename Widget_t>
 auto vbuf(std::unique_ptr<Widget_t> w_ptr) -> std::unique_ptr<VBuf<Widget_t>>
 {
     return std::make_unique<VBuf<Widget_t>>(std::move(w_ptr));
-}
-
-template <typename Widget_t>
-using HBuf = Buf<Widget_t, ox::layout::Horizontal>;
-
-template <typename Widget_t>
-auto hbuf(std::unique_ptr<Widget_t> w_ptr) -> std::unique_ptr<HBuf<Widget_t>>
-{
-    return std::make_unique<HBuf<Widget_t>>(std::move(w_ptr));
 }
 
 class Test : public ox::Cycle_stack<> {

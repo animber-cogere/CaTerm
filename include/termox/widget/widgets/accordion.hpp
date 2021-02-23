@@ -12,6 +12,7 @@
 #include <caterm/widget/layouts/detail/linear_layout.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/opposite.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/label.hpp>
@@ -140,7 +141,8 @@ enum class Bar_position { First, Last };
 template <template <typename> typename Layout_t,
           typename Widget_t,
           Bar_position position = Bar_position::First>
-class Accordion : public Layout_t<Widget> {
+class Accordion : public Passive<Layout_t<Widget>> {
+   private:
     static_assert(layout::is_vertical_v<Layout_t<Widget>> ||
                   layout::is_horizontal_v<Layout_t<Widget>>);
 
@@ -161,11 +163,6 @@ class Accordion : public Layout_t<Widget> {
     {
         if constexpr (wrapped_index_ == 0)
             this->swap_children(0, 1);
-
-        if constexpr (is_vertical)
-            *this | pipe::passive_height();
-        else
-            *this | pipe::passive_width();
 
         bar_.toggle_request.connect([this] { this->toggle_expansion(); });
 

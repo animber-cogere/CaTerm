@@ -9,6 +9,7 @@
 #include <caterm/system/key.hpp>
 #include <caterm/system/mouse.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/selecting.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pair.hpp>
@@ -35,14 +36,13 @@ class Menu_item : public Selectable<HLabel> {
     }
 };
 
-class Menu_list : public layout::Selecting<layout::Vertical<Menu_item>> {
+class Menu_list
+    : public Passive<layout::Selecting<layout::Vertical<Menu_item>>> {
     using Base_t = layout::Selecting<layout::Vertical<Menu_item>>;
 
    public:
     Menu_list()
     {
-        *this | pipe::passive_height();
-
         this->set_increment_selection_keys({Key::Arrow_down, Key::j});
         this->set_decrement_selection_keys({Key::Arrow_up, Key::k});
     }

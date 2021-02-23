@@ -6,6 +6,7 @@
 #include <signals_light/signal.hpp>
 
 #include <caterm/widget/layouts/opposite.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/pair.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widget.hpp>
@@ -23,7 +24,7 @@ class Button_list : public layout::Opposite_t<Layout_t<Widget>> {
     static auto constexpr is_vertical = layout::is_vertical_v<Base_t>;
 
    private:
-    class Button_list_impl : public Layout_t<Button> {
+    class Button_list_impl : public Passive<Layout_t<Button>> {
        private:
         using Base_t = Layout_t<Button>;
 
@@ -31,9 +32,6 @@ class Button_list : public layout::Opposite_t<Layout_t<Widget>> {
 
        public:
         sl::Signal<void(std::u32string const& name)> button_pressed;
-
-       public:
-        Button_list_impl() { *this | pipe::passive_height(); }
 
        public:
         auto add_button(std::u32string const& name) -> Button&

@@ -1,5 +1,5 @@
-#ifndef CATERM_HPP
-#define CATERM_HPP
+#ifndef CATERM_CATERM_HPP
+#define CATERM_CATERM_HPP
 
 #include <caterm/common/mb_to_u32.hpp>
 #include <caterm/common/u32_to_mb.hpp>
@@ -22,7 +22,13 @@
 
 #include <caterm/terminal/terminal.hpp>
 
+#include <caterm/widget/layouts/fixed.hpp>
+#include <caterm/widget/layouts/float.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/opposite.hpp>
+#include <caterm/widget/layouts/passive.hpp>
+#include <caterm/widget/layouts/selecting.hpp>
+#include <caterm/widget/layouts/set.hpp>
 #include <caterm/widget/layouts/stack.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 
@@ -68,4 +74,4 @@
 #include <caterm/widget/widget.hpp>
 #include <caterm/widget/widget_slots.hpp>
 
-#endif  // CATERM_HPP
+#endif  // CATERM_CATERM_HPP

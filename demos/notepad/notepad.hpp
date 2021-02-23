@@ -12,6 +12,7 @@
 #include <caterm/widget/align.hpp>
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widget_slots.hpp>
@@ -44,7 +45,7 @@ class Trait_checkbox : public ox::HCheckbox_label {
 };
 
 /// Holds a Trait_checkbox for each Trait, emits Signals.
-class Trait_boxes : public ox::layout::Vertical<Trait_checkbox> {
+class Trait_boxes : public ox::Passive<ox::layout::Vertical<Trait_checkbox>> {
    public:
     sl::Signal<void(ox::Trait)> trait_enabled;
     sl::Signal<void(ox::Trait)> trait_disabled;
@@ -109,11 +110,7 @@ class Side_pane : public ox::layout::Vertical<> {
     Widget& buffer = this->make_child();
 
    public:
-    Side_pane()
-    {
-        *this | ox::pipe::fixed_width(16);
-        trait_boxes | ox::pipe::passive_height();
-    }
+    Side_pane() { *this | ox::pipe::fixed_width(16); }
 };
 
 using Side_pane_accordion = ox::HAccordion<Side_pane, ox::Bar_position::Last>;
