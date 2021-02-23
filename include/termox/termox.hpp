@@ -65,12 +65,19 @@
 #include <caterm/widget/widgets/toggle_button.hpp>
 #include <caterm/widget/widgets/vertical_slider.hpp>
 
+#include <caterm/widget/align.hpp>
 #include <caterm/widget/area.hpp>
+#include <caterm/widget/array.hpp>
 #include <caterm/widget/border.hpp>
+#include <caterm/widget/cursor.hpp>
 #include <caterm/widget/focus_policy.hpp>
+#include <caterm/widget/growth.hpp>
 #include <caterm/widget/layout.hpp>
+#include <caterm/widget/pair.hpp>
+#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/point.hpp>
 #include <caterm/widget/size_policy.hpp>
+#include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widget.hpp>
 #include <caterm/widget/widget_slots.hpp>
 
