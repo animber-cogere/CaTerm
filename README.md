@@ -5,9 +5,9 @@
 # CaTerm 🐂
 
 **CaTerm** is a Terminal User Interface Framework for C++17. Built on top of
-[nCurses](https://invisible-island.net/ncurses/announce.html), it defines a set
-of Widgets, Layouts, and Events that make it quick to craft unique user
-interfaces in the terminal.
+[Escape](https://github.com/animber-coder/Escape), it defines a set of Widgets,
+Layouts, and Events that make it quick to craft unique user interfaces in the
+terminal.
 
 <!-- TODO - single gif of multiple demos -->
 <p align="center">
