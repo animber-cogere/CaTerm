@@ -8,8 +8,6 @@
 #include <utility>
 #include <vector>
 
-#include <iostream>  //temp
-
 #include <caterm/system/event.hpp>
 #include <caterm/system/system.hpp>
 #include <caterm/widget/focus_policy.hpp>
