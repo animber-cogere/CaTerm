@@ -19,6 +19,19 @@ target_link_libraries(CaTerm
 
 target_include_directories(CaTerm PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
+include(GNUInstallDirs)
+install(TARGETS CaTerm
+        ARCHIVE
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        CONFIGURATIONS Release
+)
+install(
+    DIRECTORY
+        ${PROJECT_SOURCE_DIR}/include/caterm
+    DESTINATION
+        ${CMAKE_INSTALL_INCLUDEDIR}
+)
+
 if(NOT ${CMAKE_VERSION} VERSION_LESS "3.8")
     target_compile_features(CaTerm PUBLIC cxx_std_17)
 endif()
