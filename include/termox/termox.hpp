@@ -4,19 +4,45 @@
 #include <caterm/common/mb_to_u32.hpp>
 #include <caterm/common/u32_to_mb.hpp>
 
+#include <caterm/painter/palette/amstrad_cpc.hpp>
+#include <caterm/painter/palette/apple_ii.hpp>
+#include <caterm/painter/palette/ashes.hpp>
+#include <caterm/painter/palette/basic.hpp>
+#include <caterm/painter/palette/basic8.hpp>
+#include <caterm/painter/palette/cga.hpp>
+#include <caterm/painter/palette/commodore_64.hpp>
+#include <caterm/painter/palette/commodore_vic20.hpp>
+#include <caterm/painter/palette/dawn_bringer16.hpp>
+#include <caterm/painter/palette/dawn_bringer32.hpp>
+#include <caterm/painter/palette/en4.hpp>
+#include <caterm/painter/palette/gameboy.hpp>
+#include <caterm/painter/palette/gameboy_pocket.hpp>
+#include <caterm/painter/palette/macintosh_ii.hpp>
+#include <caterm/painter/palette/msx.hpp>
+#include <caterm/painter/palette/nes.hpp>
+#include <caterm/painter/palette/savanna.hpp>
+#include <caterm/painter/palette/secam.hpp>
+#include <caterm/painter/palette/stormy6.hpp>
+#include <caterm/painter/palette/teletext.hpp>
+#include <caterm/painter/palette/thomson_m05.hpp>
+#include <caterm/painter/palette/windows.hpp>
+#include <caterm/painter/palette/windows_console.hpp>
+#include <caterm/painter/palette/zx_spectrum.hpp>
+
 #include <caterm/painter/brush.hpp>
 #include <caterm/painter/color.hpp>
+#include <caterm/painter/dynamic_colors.hpp>
 #include <caterm/painter/glyph.hpp>
 #include <caterm/painter/glyph_matrix.hpp>
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/painter/painter.hpp>
 #include <caterm/painter/trait.hpp>
 
+#include <caterm/system/animation_engine.hpp>
+#include <caterm/system/event.hpp>
+#include <caterm/system/event_loop.hpp>
 #include <caterm/system/key.hpp>
 #include <caterm/system/mouse.hpp>
-
-#include <caterm/system/animation_engine.hpp>
-#include <caterm/system/event_loop.hpp>
 #include <caterm/system/shortcuts.hpp>
 #include <caterm/system/system.hpp>
 
