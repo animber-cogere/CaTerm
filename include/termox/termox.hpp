@@ -78,8 +78,7 @@
 #include <caterm/widget/widgets/menu_stack.hpp>
 #include <caterm/widget/widgets/notify_light.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
-#include <caterm/widget/widgets/open_file.hpp>
-#include <caterm/widget/widgets/save_file.hpp>
+#include <caterm/widget/widgets/read_file.hpp>
 #include <caterm/widget/widgets/scrollbar.hpp>
 #include <caterm/widget/widgets/selectable.hpp>
 #include <caterm/widget/widgets/spinner.hpp>
@@ -90,6 +89,7 @@
 #include <caterm/widget/widgets/titlebar.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
 #include <caterm/widget/widgets/vertical_slider.hpp>
+#include <caterm/widget/widgets/write_file.hpp>
 
 #include <caterm/widget/align.hpp>
 #include <caterm/widget/area.hpp>
