@@ -7,8 +7,8 @@
 #include <caterm/painter/painter.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/widgets/confirm_button.hpp>
-#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/textline.hpp>
 
 #include "color_control.hpp"
 #include "color_display.hpp"

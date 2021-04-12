@@ -71,7 +71,6 @@
 #include <caterm/widget/widgets/hideable.hpp>
 #include <caterm/widget/widgets/horizontal_slider.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/log.hpp>
 #include <caterm/widget/widgets/matrix_display.hpp>
 #include <caterm/widget/widgets/menu.hpp>
@@ -85,6 +84,7 @@
 #include <caterm/widget/widgets/status_bar.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
 #include <caterm/widget/widgets/textbox.hpp>
+#include <caterm/widget/widgets/textline.hpp>
 #include <caterm/widget/widgets/tile.hpp>
 #include <caterm/widget/widgets/titlebar.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>

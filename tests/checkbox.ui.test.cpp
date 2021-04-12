@@ -15,8 +15,8 @@
 #include <caterm/widget/widgets/checkbox.hpp>
 #include <caterm/widget/widgets/cycle_stack.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/notify_light.hpp>
+#include <caterm/widget/widgets/textline.hpp>
 
 class Count : public ox::HLabel {
    public:
@@ -180,7 +180,7 @@ class Runtime : public ox::layout::Horizontal<> {
 
        private:
         using Checkbox  = ox::HCheckbox20_label;
-        using Edit      = ox::HLabel_left<ox::Line_edit>;
+        using Edit      = ox::HLabel_left<ox::Textline>;
         using Light_box = ox::HLabel_right<ox::Notify_light>;
 
         // TODO make a Widget with template template layout parameter

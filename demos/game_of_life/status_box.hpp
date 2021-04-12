@@ -7,9 +7,9 @@
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/textline.hpp>
 
 #include "make_break.hpp"
 

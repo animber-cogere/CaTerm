@@ -7,7 +7,7 @@
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/line_edit.hpp>
+#include <caterm/widget/widgets/textline.hpp>
 #include <caterm/widget/widgets/vertical_slider.hpp>
 
 namespace palette::detail {
@@ -21,14 +21,14 @@ struct Buffered_slider : ox::layout::Horizontal<> {
     Widget& right    = this->make_child() | ox::pipe::fixed_width(1);
 };
 
-/// Line_edit with extra space on the left side.
+/// Textline with extra space on the left side.
 class Buffered_edit_box : public ox::layout::Horizontal<> {
    public:
     Buffered_edit_box();
 
    public:
-    Widget& left       = this->make_child() | ox::pipe::fixed_width(1);
-    ox::Line_edit& box = this->make_child<ox::Line_edit>("0");
+    Widget& left      = this->make_child() | ox::pipe::fixed_width(1);
+    ox::Textline& box = this->make_child<ox::Textline>(U"0");
 };
 }  // namespace palette::detail
 
