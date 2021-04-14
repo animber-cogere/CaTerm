@@ -6,19 +6,24 @@
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
+#include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widgets/label.hpp>
+#include <caterm/widget/widgets/slider.hpp>
 #include <caterm/widget/widgets/textline.hpp>
-#include <caterm/widget/widgets/vertical_slider.hpp>
 
 namespace palette::detail {
 
-/// Vertical_slider with extra space around the sides.
-struct Buffered_slider : ox::layout::Horizontal<> {
-    using Slider_t = ox::Vertical_slider;
+/// Slider_bottom with extra space around the sides.
+struct Buffered_slider : ox::HTuple<ox::Widget, ox::Slider_bottom, ox::Widget> {
+    Widget& left              = this->get<0>() | ox::pipe::fixed_width(1);
+    ox::Slider_bottom& slider = this->get<1>();
+    Widget& right             = this->get<2>() | ox::pipe::fixed_width(1);
 
-    Widget& left     = this->make_child() | ox::pipe::fixed_width(1);
-    Slider_t& slider = this->make_child<Slider_t>(0, 255);
-    Widget& right    = this->make_child() | ox::pipe::fixed_width(1);
+    Buffered_slider()
+        : ox::HTuple<ox::Widget, ox::Slider_bottom, ox::Widget>{{},
+                                                                {{0, 255}, 0},
+                                                                {}}
+    {}
 };
 
 /// Textline with extra space on the left side.
