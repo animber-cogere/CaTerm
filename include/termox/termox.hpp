@@ -69,8 +69,8 @@
 #include <caterm/widget/widgets/cycle_stack.hpp>
 #include <caterm/widget/widgets/graph.hpp>
 #include <caterm/widget/widgets/hideable.hpp>
-#include <caterm/widget/widgets/horizontal_slider.hpp>
 #include <caterm/widget/widgets/label.hpp>
+#include <caterm/widget/widgets/line.hpp>
 #include <caterm/widget/widgets/log.hpp>
 #include <caterm/widget/widgets/matrix_display.hpp>
 #include <caterm/widget/widgets/menu.hpp>
@@ -80,6 +80,7 @@
 #include <caterm/widget/widgets/read_file.hpp>
 #include <caterm/widget/widgets/scrollbar.hpp>
 #include <caterm/widget/widgets/selectable.hpp>
+#include <caterm/widget/widgets/slider.hpp>
 #include <caterm/widget/widgets/spinner.hpp>
 #include <caterm/widget/widgets/status_bar.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
@@ -88,7 +89,6 @@
 #include <caterm/widget/widgets/tile.hpp>
 #include <caterm/widget/widgets/titlebar.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
-#include <caterm/widget/widgets/vertical_slider.hpp>
 #include <caterm/widget/widgets/write_file.hpp>
 
 #include <caterm/widget/align.hpp>
