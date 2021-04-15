@@ -82,7 +82,6 @@
 #include <caterm/widget/widgets/selectable.hpp>
 #include <caterm/widget/widgets/slider.hpp>
 #include <caterm/widget/widgets/spinner.hpp>
-#include <caterm/widget/widgets/status_bar.hpp>
 #include <caterm/widget/widgets/text_display.hpp>
 #include <caterm/widget/widgets/textbox.hpp>
 #include <caterm/widget/widgets/textline.hpp>
