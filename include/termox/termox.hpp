@@ -76,6 +76,7 @@
 #include <caterm/widget/widgets/menu.hpp>
 #include <caterm/widget/widgets/menu_stack.hpp>
 #include <caterm/widget/widgets/notify_light.hpp>
+#include <caterm/widget/widgets/number_display.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/read_file.hpp>
 #include <caterm/widget/widgets/scrollbar.hpp>
