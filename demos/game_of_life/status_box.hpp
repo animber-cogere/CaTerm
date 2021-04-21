@@ -8,7 +8,7 @@
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
-#include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_view.hpp>
 #include <caterm/widget/widgets/textline.hpp>
 
 #include "make_break.hpp"
@@ -33,7 +33,8 @@ class Generation_count : public ox::layout::Horizontal<> {
    private:
     ox::HLabel& title_ = this->make_child<ox::HLabel>({U"Generation"});
 
-    ox::Text_display& count_ = this->make_child<ox::Text_display>(U"0");
+    // TODO change to Int_view
+    ox::Text_view& count_ = this->make_child<ox::Text_view>(U"0");
 };
 
 struct Center_offset : ox::layout::Vertical<> {

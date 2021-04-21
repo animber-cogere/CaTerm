@@ -20,7 +20,7 @@
 #include <caterm/widget/widgets/confirm_button.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
-#include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_view.hpp>
 #include <caterm/widget/widgets/textline.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
 

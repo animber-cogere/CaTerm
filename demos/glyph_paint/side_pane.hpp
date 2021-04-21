@@ -8,7 +8,7 @@
 #include <caterm/widget/widgets/color_select.hpp>
 #include <caterm/widget/widgets/cycle_stack.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_view.hpp>
 
 #include "glyph_selector.hpp"
 #include "options_box.hpp"

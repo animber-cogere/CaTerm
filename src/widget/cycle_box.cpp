@@ -4,7 +4,7 @@
 
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/system/mouse.hpp>
-#include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_view.hpp>
 
 namespace {
 

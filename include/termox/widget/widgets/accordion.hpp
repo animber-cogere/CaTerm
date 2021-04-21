@@ -16,7 +16,7 @@
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/label.hpp>
-#include <caterm/widget/widgets/text_display.hpp>
+#include <caterm/widget/widgets/text_view.hpp>
 
 namespace ox {
 
