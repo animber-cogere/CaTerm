@@ -1,24 +1,11 @@
-#ifndef CATERM_DEMOS_COMPOSITES_COMPOSITES_HPP
-#define CATERM_DEMOS_COMPOSITES_COMPOSITES_HPP
+#ifndef CATERM_DEMOS_TWO_LISTS_HPP
+#define CATERM_DEMOS_TWO_LISTS_HPP
 #include <string>
 #include <utility>
 
-#include <caterm/system/key.hpp>
-#include <caterm/widget/array.hpp>
-#include <caterm/widget/layouts/horizontal.hpp>
-#include <caterm/widget/layouts/selecting.hpp>
-#include <caterm/widget/layouts/vertical.hpp>
-#include <caterm/widget/pair.hpp>
-#include <caterm/widget/pipe.hpp>
-#include <caterm/widget/tuple.hpp>
-#include <caterm/widget/widget.hpp>
-#include <caterm/widget/widgets/button.hpp>
-#include <caterm/widget/widgets/checkbox.hpp>
-#include <caterm/widget/widgets/cycle_box.hpp>
-#include <caterm/widget/widgets/selectable.hpp>
-#include <caterm/widget/widgets/textbox.hpp>
+#include <caterm/caterm.hpp>
 
-namespace comp {
+namespace demo {
 
 using Btns = ox::Array<ox::layout::Horizontal<ox::Button>, 2>;
 
@@ -208,5 +195,5 @@ class Idea : public Settings_box {
     }
 };
 
-}  // namespace comp
-#endif  // CATERM_DEMOS_COMPOSITES_COMPOSITES_HPP
+}  // namespace demo
+#endif  // CATERM_DEMOS_TWO_LISTS_HPP

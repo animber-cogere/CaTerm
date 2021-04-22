@@ -1,21 +1,8 @@
-#ifndef CATERM_DEMOS_LAYOUT_LAYOUT_DEMO_HPP
-#define CATERM_DEMOS_LAYOUT_LAYOUT_DEMO_HPP
-#include <signals_light/signal.hpp>
+#ifndef CATERM_DEMOS_LAYOUT_DEMO_HPP
+#define CATERM_DEMOS_LAYOUT_DEMO_HPP
+#include <caterm/caterm.hpp>
 
-#include <caterm/painter/color.hpp>
-#include <caterm/painter/painter.hpp>
-#include <caterm/system/system.hpp>
-#include <caterm/widget/layouts/horizontal.hpp>
-#include <caterm/widget/layouts/vertical.hpp>
-#include <caterm/widget/point.hpp>
-#include <caterm/widget/size_policy.hpp>
-#include <caterm/widget/widget.hpp>
-#include <caterm/widget/widgets/button.hpp>
-#include <caterm/widget/widgets/cycle_box.hpp>
-#include <caterm/widget/widgets/number_edit.hpp>
-#include <caterm/widget/widgets/text_view.hpp>
-
-namespace layout_demo {
+namespace demo {
 
 class Meta_widget : public ox::Widget {
    public:
@@ -280,5 +267,5 @@ struct Layout_demo : ox::layout::Horizontal<> {
     Meta_widget* selected_{nullptr};
 };
 
-}  // namespace layout_demo
-#endif  // CATERM_DEMOS_LAYOUT_LAYOUT_DEMO_HPP
+}  // namespace demo
+#endif  // CATERM_DEMOS_LAYOUT_DEMO_HPP

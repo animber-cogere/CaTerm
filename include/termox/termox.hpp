@@ -1,6 +1,8 @@
 #ifndef CATERM_CATERM_HPP
 #define CATERM_CATERM_HPP
 
+#include <signals_light/signal.hpp>
+
 #include <caterm/common/mb_to_u32.hpp>
 #include <caterm/common/u32_to_mb.hpp>
 

@@ -1,41 +1,8 @@
-#ifndef CATERM_DEMOS_COLORS_COLORS_DISPLAY_HPP
-#define CATERM_DEMOS_COLORS_COLORS_DISPLAY_HPP
+#ifndef CATERM_DEMOS_PALETTE_VIEW_HPP
+#define CATERM_DEMOS_PALETTE_VIEW_HPP
 #include <utility>
 
-#include <signals_light/signal.hpp>
-
-#include <caterm/painter/color.hpp>
-#include <caterm/painter/glyph_string.hpp>
-#include <caterm/painter/palette/amstrad_cpc.hpp>
-#include <caterm/painter/palette/apple_ii.hpp>
-#include <caterm/painter/palette/ashes.hpp>
-#include <caterm/painter/palette/basic.hpp>
-#include <caterm/painter/palette/basic8.hpp>
-#include <caterm/painter/palette/cga.hpp>
-#include <caterm/painter/palette/commodore_64.hpp>
-#include <caterm/painter/palette/commodore_vic20.hpp>
-#include <caterm/painter/palette/dawn_bringer16.hpp>
-#include <caterm/painter/palette/dawn_bringer32.hpp>
-#include <caterm/painter/palette/en4.hpp>
-#include <caterm/painter/palette/gameboy.hpp>
-#include <caterm/painter/palette/gameboy_pocket.hpp>
-#include <caterm/painter/palette/macintosh_ii.hpp>
-#include <caterm/painter/palette/msx.hpp>
-#include <caterm/painter/palette/nes.hpp>
-#include <caterm/painter/palette/savanna.hpp>
-#include <caterm/painter/palette/secam.hpp>
-#include <caterm/painter/palette/stormy6.hpp>
-#include <caterm/painter/palette/teletext.hpp>
-#include <caterm/painter/palette/thomson_m05.hpp>
-#include <caterm/painter/palette/windows.hpp>
-#include <caterm/painter/palette/windows_console.hpp>
-#include <caterm/painter/palette/zx_spectrum.hpp>
-#include <caterm/system/system.hpp>
-#include <caterm/terminal/terminal.hpp>
-#include <caterm/widget/layouts/vertical.hpp>
-#include <caterm/widget/pipe.hpp>
-#include <caterm/widget/widgets/color_select.hpp>
-#include <caterm/widget/widgets/cycle_box.hpp>
+#include <caterm/caterm.hpp>
 
 namespace colors {
 
@@ -44,7 +11,7 @@ class Palette_picker : public ox::Labeled_cycle_box {
     sl::Signal<void(ox::Palette)> palette_picked;
 
    public:
-    Palette_picker() : Labeled_cycle_box{"Palette"}
+    Palette_picker(Parameters = {}) : Labeled_cycle_box{"Palette"}
     {
         using namespace ox;
         *this | pipe::direct_focus();
@@ -85,14 +52,16 @@ class Palette_picker : public ox::Labeled_cycle_box {
     }
 };
 
-class Palette_demo : public ox::layout::Vertical<> {
+class Palette_view : public ox::VPair<ox::Color_select, Palette_picker> {
    public:
-    ox::Color_select& palette_view =
-        this->make_child<ox::Color_select>(ox::Color_tile::Display::Number);
-    Palette_picker& palette_picker = this->make_child<Palette_picker>();
+    ox::Color_select& palette_view = this->first;
+    Palette_picker& palette_picker = this->second;
 
    public:
-    Palette_demo()
+    Palette_view()
+        : ox::VPair<ox::Color_select, Palette_picker>{
+              {ox::Color_tile::Display::Number},
+              {}}
     {
         using namespace ox::pipe;
         *this | strong_focus();
@@ -110,4 +79,4 @@ class Palette_demo : public ox::layout::Vertical<> {
 };
 
 }  // namespace colors
-#endif  // CATERM_DEMOS_COLORS_COLORS_DISPLAY_HPP
+#endif  // CATERM_DEMOS_PALETTE_VIEW_HPP

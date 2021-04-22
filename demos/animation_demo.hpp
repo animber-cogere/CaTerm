@@ -1,15 +1,8 @@
-#ifndef CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
-#define CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
-#include <caterm/painter/color.hpp>
-#include <caterm/painter/glyph.hpp>
-#include <caterm/painter/painter.hpp>
-#include <caterm/system/mouse.hpp>
-#include <caterm/widget/layouts/horizontal.hpp>
-#include <caterm/widget/pipe.hpp>
-#include <caterm/widget/point.hpp>
-#include <caterm/widget/widget.hpp>
+#ifndef CATERM_DEMOS_ANIMATED_WIDGET_HPP
+#define CATERM_DEMOS_ANIMATED_WIDGET_HPP
+#include <caterm/caterm.hpp>
 
-namespace demos::animation {
+namespace demo {
 
 /// Box containing a circle character that bounces off the Widget's walls.
 class Animated_box : public ox::Widget {
@@ -93,7 +86,7 @@ class Animated_box : public ox::Widget {
 };
 
 /// Contains a few Animated_boxes at various animation rates.
-inline auto build_demo() -> std::unique_ptr<ox::Widget>
+inline auto make_animation_demo() -> std::unique_ptr<ox::Widget>
 {
     using namespace ox;
     auto app = layout::horizontal<Animated_box>(
@@ -108,5 +101,5 @@ inline auto build_demo() -> std::unique_ptr<ox::Widget>
     return app;
 }
 
-}  // namespace demos::animation
-#endif  // CATERM_DEMOS_ANIMATION_ANIMATED_WIDGET_HPP
+}  // namespace demo
+#endif  // CATERM_DEMOS_ANIMATED_WIDGET_HPP
