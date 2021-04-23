@@ -20,9 +20,9 @@
 #include <caterm/widget/widgets/confirm_button.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/line.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/text_view.hpp>
-#include <caterm/widget/widgets/textline.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
 
 #include "colors.hpp"
@@ -88,7 +88,7 @@ class Rule_edit : public ox::layout::Vertical<> {
         {U"RuleString[B/S]" | ox::Trait::Underline | ox::Trait::Bold,
          ox::Align::Center});
 
-    ox::Textline& edit_box_ = this->make_child<ox::Textline>();
+    ox::Line_edit& edit_box_ = this->make_child<ox::Line_edit>();
 };
 
 struct Start_pause_btns : ox::Toggle_button {

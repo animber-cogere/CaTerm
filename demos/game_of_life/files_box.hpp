@@ -9,7 +9,7 @@
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/confirm_button.hpp>
 #include <caterm/widget/widgets/line.hpp>
-#include <caterm/widget/widgets/textline.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 
 #include "colors.hpp"
 
@@ -23,7 +23,7 @@ class File_widget : public ox::layout::Vertical<> {
     };
 
    public:
-    ox::Textline& filename_box_ = this->make_child<ox::Textline>(U"Filename");
+    ox::Line_edit& filename_box_ = this->make_child<ox::Line_edit>(U"Filename");
 
     ox::Confirm_button& confirm_btn_;
 

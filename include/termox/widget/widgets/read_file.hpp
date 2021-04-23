@@ -8,18 +8,18 @@
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widgets/button.hpp>
-#include <caterm/widget/widgets/textline.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/tile.hpp>
 
 namespace ox::detail {
 
-struct Read_file_widgets : HTuple<Button, Tile, Textline> {
-    Button& open_btn        = this->get<0>();
-    Tile& buffer            = this->get<1>();
-    Textline& filename_edit = this->get<2>();
+struct Read_file_widgets : HTuple<Button, Tile, Line_edit> {
+    Button& open_btn         = this->get<0>();
+    Tile& buffer             = this->get<1>();
+    Line_edit& filename_edit = this->get<2>();
 
     Read_file_widgets()
-        : HTuple<Button, Tile, Textline>{{U"Open"}, {U'>'}, {U"Filename"}}
+        : HTuple<Button, Tile, Line_edit>{{U"Open"}, {U'>'}, {U"Filename"}}
     {
         using namespace ox::pipe;
         *this | fixed_height(1);
@@ -33,7 +33,7 @@ struct Read_file_widgets : HTuple<Button, Tile, Textline> {
 
 namespace ox {
 
-/// Provides a filename Textline and button to emit a std::ifstream.
+/// Provides a filename Line_edit and button to emit a std::ifstream.
 template <typename Char_t = char>
 class Read_file : public detail::Read_file_widgets {
    public:

@@ -9,10 +9,10 @@
 #include <caterm/widget/pair.hpp>
 #include <caterm/widget/widgets/label.hpp>
 #include <caterm/widget/widgets/line.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/number_view.hpp>
 #include <caterm/widget/widgets/text_view.hpp>
-#include <caterm/widget/widgets/textline.hpp>
 
 #include "colors.hpp"
 

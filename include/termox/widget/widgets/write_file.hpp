@@ -8,18 +8,18 @@
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widgets/button.hpp>
-#include <caterm/widget/widgets/textline.hpp>
+#include <caterm/widget/widgets/line_edit.hpp>
 #include <caterm/widget/widgets/tile.hpp>
 
 namespace ox::detail {
 
-struct Write_file_widgets : HTuple<Button, Tile, Textline> {
-    Button& save_btn        = this->get<0>();
-    Tile& buffer            = this->get<1>();
-    Textline& filename_edit = this->get<2>();
+struct Write_file_widgets : HTuple<Button, Tile, Line_edit> {
+    Button& save_btn         = this->get<0>();
+    Tile& buffer             = this->get<1>();
+    Line_edit& filename_edit = this->get<2>();
 
     Write_file_widgets()
-        : HTuple<Button, Tile, Textline>{{U"Save"}, {U'>'}, {U"Filename"}}
+        : HTuple<Button, Tile, Line_edit>{{U"Save"}, {U'>'}, {U"Filename"}}
     {
         using namespace ox::pipe;
         *this | fixed_height(1);
