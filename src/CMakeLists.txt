@@ -86,7 +86,6 @@ target_sources(CaTerm
     PRIVATE
         widget/widget.cpp
         widget/widget_slots.cpp
-        widget/line_edit.cpp
         widget/border.cpp
         widget/cycle_box.cpp
         widget/textbox.cpp
