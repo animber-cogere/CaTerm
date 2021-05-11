@@ -3,17 +3,10 @@
 #include <memory>
 #include <type_traits>
 #include <utility>
-#include <vector>
 
-#include <caterm/painter/brush.hpp>
-#include <caterm/painter/color.hpp>
 #include <caterm/painter/glyph_string.hpp>
-#include <caterm/painter/trait.hpp>
-#include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/stack.hpp>
-#include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pair.hpp>
-#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widget.hpp>
 #include <caterm/widget/widgets/button.hpp>
@@ -32,17 +25,7 @@ class CS_top_row : public HTuple<Button, Cycle_box, Button> {
     Button& right_btn    = this->get<2>();
 
    public:
-    CS_top_row(Parameters = {})
-        : HTuple<Button, Cycle_box, Button>{{U"<"}, {}, {U">"}}
-    {
-        using namespace pipe;
-        *this | fixed_height(1) | children() | bg(Color::Light_gray) |
-            fg(Color::Black);
-
-        left_btn | fixed_width(1) | on_press(slot::previous(cycle_box));
-        right_btn | fixed_width(1) | on_press(slot::next(cycle_box));
-        cycle_box | Trait::Bold;
-    }
+    CS_top_row(Parameters = {});
 };
 
 }  // namespace ox::detail

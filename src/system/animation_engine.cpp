@@ -8,6 +8,8 @@
 
 #include <caterm/common/fps.hpp>
 #include <caterm/system/event.hpp>
+#include <caterm/system/event_loop.hpp>
+#include <caterm/system/event_queue.hpp>
 #include <caterm/system/system.hpp>
 #include <caterm/widget/widget.hpp>
 
@@ -35,6 +37,21 @@ void Animation_engine::unregister_widget(Widget& w)
     auto const lock = this->Lockable::lock();
     subjects_.erase(&w);
 }
+
+auto Animation_engine::is_empty() const -> bool { return subjects_.empty(); }
+
+void Animation_engine::start()
+{
+    loop_.run_async([this](Event_queue& q) { this->loop_function(q); });
+}
+
+void Animation_engine::stop()
+{
+    loop_.exit(0);
+    loop_.wait();
+}
+
+auto Animation_engine::is_running() const -> bool { return loop_.is_running(); }
 
 void Animation_engine::loop_function(Event_queue& queue)
 {

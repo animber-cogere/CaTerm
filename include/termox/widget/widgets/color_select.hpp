@@ -1,17 +1,12 @@
 #ifndef CATERM_WIDGET_WIDGETS_COLOR_SELECT_HPP
 #define CATERM_WIDGET_WIDGETS_COLOR_SELECT_HPP
 #include <memory>
-#include <string>
-#include <utility>
 
 #include <signals_light/signal.hpp>
 
 #include <caterm/painter/color.hpp>
-#include <caterm/painter/glyph_string.hpp>
-#include <caterm/painter/painter.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
-#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/button.hpp>
 
 namespace ox {
@@ -26,15 +21,9 @@ class Color_tile : public Button {
     };
 
    public:
-    explicit Color_tile(Color c, Display display = Display::None)
-        : Button{display == Display::None ? "" : std::to_string(c.value)}
-    {
-        *this | bg(c);
-    }
+    explicit Color_tile(Color c, Display display = Display::None);
 
-    explicit Color_tile(Parameters parameters)
-        : Color_tile{parameters.color, parameters.display}
-    {}
+    explicit Color_tile(Parameters p);
 };
 
 using Color_line = layout::Horizontal<Color_tile>;
@@ -52,55 +41,25 @@ class Color_select : public layout::Vertical<Color_line> {
 
    public:
     explicit Color_select(
-        Color_tile::Display display = Color_tile::Display::None)
-        : display_{display}
-    {
-        this->set_palette(Terminal::current_palette());
-        Terminal::palette_changed.connect(
-            [this](auto const& pal) { this->set_palette(pal); });
-    }
+        Color_tile::Display display = Color_tile::Display::None);
 
-    explicit Color_select(Parameters parameters)
-        : Color_select{parameters.display}
-    {}
+    explicit Color_select(Parameters p);
 
    private:
-    void set_palette(Palette const& pal)
-    {
-        this->delete_all_children();
-        auto const size           = pal.size();
-        auto constexpr row_length = 8uL;
-        auto count                = 0uL;
-
-        while (count != size) {
-            auto& color_line = this->make_child();
-            for (auto i = 0uL; i < row_length && count != size; ++i, ++count) {
-                auto const color = pal[count].color;
-                color_line.make_child(color, display_) |
-                    pipe::on_press(
-                        [this, color] { color_selected.emit(color); });
-            }
-        }
-    }
+    void set_palette(Palette const& pal);
 
    private:
     Color_tile::Display display_;
 };
 
 /// Helper function to create a Color_select instance.
-[[nodiscard]] inline auto color_select(
+[[nodiscard]] auto color_select(
     Color_tile::Display display = Color_tile::Display::None)
-    -> std::unique_ptr<Color_select>
-{
-    return std::make_unique<Color_select>(display);
-}
+    -> std::unique_ptr<Color_select>;
 
 /// Helper function to create a Color_select instance.
-[[nodiscard]] inline auto color_select(Color_select::Parameters parameters)
-    -> std::unique_ptr<Color_select>
-{
-    return std::make_unique<Color_select>(std::move(parameters));
-}
+[[nodiscard]] auto color_select(Color_select::Parameters p)
+    -> std::unique_ptr<Color_select>;
 
 }  // namespace ox
 #endif  // CATERM_WIDGET_WIDGETS_COLOR_SELECT_HPP

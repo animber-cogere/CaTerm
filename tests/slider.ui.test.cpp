@@ -5,6 +5,7 @@
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pair.hpp>
+#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/tuple.hpp>
 #include <caterm/widget/widgets/line.hpp>
 #include <caterm/widget/widgets/slider.hpp>
@@ -19,7 +20,7 @@ struct Slider_view : VPair<Slider_t, Text_view> {
     Slider_view() : VPair<Slider_t, Text_view>{{{-255, 255}, 0}, {U"Init"}}
     {
         this->first.value_changed.connect(
-            [this](int v) { this->second.set_contents(std::to_string(v)); });
+            [this](int v) { this->second.set_text(std::to_string(v)); });
         this->second | pipe::fixed_height(1);
     }
 };

@@ -14,9 +14,9 @@
 #include <caterm/system/mouse.hpp>
 #include <caterm/widget/area.hpp>
 #include <caterm/widget/point.hpp>
+#include <caterm/widget/widget.hpp>
 
 namespace ox {
-class Widget;
 
 using Widget_ref = std::reference_wrapper<Widget>;
 

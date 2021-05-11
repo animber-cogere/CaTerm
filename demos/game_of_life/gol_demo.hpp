@@ -1,5 +1,6 @@
 #ifndef CATERM_DEMOS_GAME_OF_LIFE_GOL_DEMO_HPP
 #define CATERM_DEMOS_GAME_OF_LIFE_GOL_DEMO_HPP
+#include <caterm/terminal/terminal.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/widgets/accordion.hpp>
 

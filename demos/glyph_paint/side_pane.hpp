@@ -1,8 +1,11 @@
 #ifndef DEMOS_GLYPH_PAINT_SIDE_PANE_HPP
 #define DEMOS_GLYPH_PAINT_SIDE_PANE_HPP
+#include <cmath>
+
 #include <caterm/painter/color.hpp>
 #include <caterm/painter/glyph.hpp>
 #include <caterm/painter/trait.hpp>
+#include <caterm/terminal/terminal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/color_select.hpp>

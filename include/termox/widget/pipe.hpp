@@ -1,5 +1,6 @@
 #ifndef CATERM_WIDGET_PIPE_HPP
 #define CATERM_WIDGET_PIPE_HPP
+#include <chrono>
 #include <cstddef>
 #include <memory>
 #include <string>
@@ -8,15 +9,16 @@
 #include <vector>
 
 #include <caterm/common/filter_iterator.hpp>
+#include <caterm/common/overload.hpp>
 #include <caterm/common/range.hpp>
 #include <caterm/common/transform_iterator.hpp>
 #include <caterm/painter/glyph_string.hpp>
-#include <caterm/system/animation_engine.hpp>
 #include <caterm/widget/align.hpp>
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/growth.hpp>
 #include <caterm/widget/point.hpp>
 #include <caterm/widget/widget.hpp>
+#include <caterm/widget/wrap.hpp>
 
 namespace ox::pipe::detail {
 
@@ -132,7 +134,7 @@ inline auto remove_filter(Widget& filter)
     };
 }
 
-inline auto animate(Animation_engine::Interval_t interval)
+inline auto animate(std::chrono::milliseconds interval)
 {
     return [=](auto&& w) -> decltype(auto) {
         get(w).enable_animation(interval);
@@ -1834,19 +1836,18 @@ inline auto divider(Glyph x)
     };
 }
 
-inline auto word_wrap(bool enable)
+inline auto any_wrap()
 {
     return [=](auto&& w) -> decltype(auto) {
-        get(w).enable_word_wrap(enable);
+        get(w).set_wrap(Wrap::Any);
         return std::forward<decltype(w)>(w);
     };
 }
 
-// TODO remove and replace with text()
-inline auto contents(Glyph_string x)
+inline auto word_wrap()
 {
     return [=](auto&& w) -> decltype(auto) {
-        get(w).set_contents(x);
+        get(w).set_wrap(Wrap::Word);
         return std::forward<decltype(w)>(w);
     };
 }
