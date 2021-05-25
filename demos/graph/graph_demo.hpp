@@ -21,6 +21,7 @@
 #include <caterm/widget/widgets/line.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
+#include "caterm/widget/array.hpp"
 
 namespace graph {
 
@@ -277,15 +278,12 @@ class Graph_core : public ox::Graph<double> {
 
 class Step_interval : public ox::HPair<ox::HLabel, ox::Int_edit> {
    public:
-    struct Parameters {};
-
-   public:
     ox::HLabel& label = this->first | ox::pipe::fixed_width(17);
     ox::Int_edit& edit =
         this->second | bg(ox::Color::White) | fg(ox::Color::Black);
 
    public:
-    explicit Step_interval(Parameters = {});
+    explicit Step_interval();
 };
 
 class Scale_box : public ox::HPair<ox::HLabel, ox::Double_edit> {

@@ -66,3 +66,12 @@ add_subdirectory(demos)
 
 # Add Tests
 add_subdirectory(tests)
+
+add_custom_target(
+    caterm.all
+    DEPENDS
+        demos
+        readme.demo
+        caterm.ui.tests
+        caterm.unit.tests
+)
