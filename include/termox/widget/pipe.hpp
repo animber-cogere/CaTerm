@@ -13,6 +13,7 @@
 #include <caterm/common/range.hpp>
 #include <caterm/common/transform_iterator.hpp>
 #include <caterm/painter/glyph_string.hpp>
+#include <caterm/system/system.hpp>
 #include <caterm/widget/align.hpp>
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/growth.hpp>
@@ -359,6 +360,15 @@ inline auto click_focus() { return focus(Focus_policy::Click); }
 inline auto strong_focus() { return focus(Focus_policy::Strong); }
 
 inline auto direct_focus() { return focus(Focus_policy::Direct); }
+
+/// Give focus to \p receiver when the piped Widget gets focus_in_event.
+inline auto forward_focus(Widget& receiver)
+{
+    return [&](auto&& w) -> decltype(auto) {
+        get(w).focused_in.connect([&] { ::ox::System::set_focus(receiver); });
+        return std::forward<decltype(w)>(w);
+    };
+}
 
 // Width Policy Modifiers -----------------------------------------------------
 

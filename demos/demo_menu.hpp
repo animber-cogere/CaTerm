@@ -7,6 +7,7 @@
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
+#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/button.hpp>
 #include <caterm/widget/widgets/menu_stack.hpp>
 #include <caterm/widget/widgets/titlebar.hpp>
@@ -86,18 +87,13 @@ class Demos : public ox::layout::Vertical<> {
    public:
     Demos()
     {
-        this->focus_policy = ox::Focus_policy::Direct;
+        using namespace ox::pipe;
+        *this | direct_focus() | forward_focus(menu);
+
         back_bar.back_btn.pressed.connect([&] {
             ox::Terminal::set_palette(Menu_palette::palette);
             menu.goto_menu();
         });
-    }
-
-   protected:
-    auto focus_in_event() -> bool override
-    {
-        ox::System::set_focus(menu);
-        return true;
     }
 };
 
