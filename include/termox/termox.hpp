@@ -97,6 +97,7 @@
 #include <caterm/widget/area.hpp>
 #include <caterm/widget/array.hpp>
 #include <caterm/widget/border.hpp>
+#include <caterm/widget/bordered.hpp>
 #include <caterm/widget/cursor.hpp>
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/growth.hpp>

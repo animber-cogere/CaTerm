@@ -9,6 +9,7 @@
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/painter/trait.hpp>
 #include <caterm/system/key.hpp>
+#include <caterm/widget/bordered.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
@@ -83,10 +84,14 @@ class Side_pane : public ox::VTuple<Labeled_color_select,
     Side_pane();
 };
 
-class Text_and_scroll : public ox::HPair<ox::VScrollbar, ox::Textbox> {
+class Text_and_scroll
+    : public ox::HPair<ox::VScrollbar, ox::Bordered<ox::Textbox>> {
+    using Base_t = ox::HPair<ox::VScrollbar, ox::Bordered<ox::Textbox>>;
+
    public:
-    ox::VScrollbar& scrollbar = this->first;
-    ox::Textbox& textbox      = this->second;
+    ox::VScrollbar& scrollbar         = this->first;
+    ox::Bordered<ox::Textbox>& border = this->second;
+    ox::Textbox& textbox              = border.wrapped;
 
    public:
     Text_and_scroll();
