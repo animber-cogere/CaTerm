@@ -6,12 +6,11 @@
 #include <utility>
 
 #include <caterm/widget/bordered.hpp>
-#include <caterm/widget/detail/border_offset.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pipe.hpp>
+#include <caterm/widget/size_policy.hpp>
 #include <caterm/widget/widget.hpp>
-#include "caterm/widget/size_policy.hpp"
 
 namespace ox::detail {
 
@@ -108,15 +107,6 @@ class Passive<Layout_t,
 
     void set_length(int length)
     {
-        // TODO this can be removed once Borders are their own thing.
-        if constexpr (is_vertical) {
-            length += detail::Border_offset::north_enabled(*this) ? 1 : 0;
-            length += detail::Border_offset::south_enabled(*this) ? 1 : 0;
-        }
-        else {
-            length += detail::Border_offset::east_enabled(*this) ? 1 : 0;
-            length += detail::Border_offset::west_enabled(*this) ? 1 : 0;
-        }
         if constexpr (is_vertical)
             *this | pipe::fixed_height(length);
         else

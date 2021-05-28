@@ -20,7 +20,6 @@
 #include <caterm/painter/glyph_string.hpp>
 #include <caterm/painter/trait.hpp>
 #include <caterm/system/key.hpp>
-#include <caterm/widget/border.hpp>
 #include <caterm/widget/detail/link_lifetimes.hpp>
 #include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/point.hpp>

@@ -62,7 +62,6 @@ add_library(CaTerm STATIC
     widget/widgets/titlebar.cpp
     widget/widgets/toggle_button.cpp
     widget/widgets/write_file.cpp
-    widget/border_offset.cpp
     widget/cursor.cpp
     widget/graph_tree.cpp
     widget/size_policy.cpp

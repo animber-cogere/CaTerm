@@ -7,7 +7,6 @@
 #include <utility>
 #include <vector>
 
-#include <caterm/widget/detail/border_offset.hpp>
 #include <caterm/widget/size_policy.hpp>
 #include <caterm/widget/widget.hpp>
 
