@@ -4,17 +4,21 @@
 #include <cstdint>
 #include <string>
 
-#include <caterm/widget/focus_policy.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/pipe.hpp>
 #include <caterm/widget/widgets/accordion.hpp>
 
+#include "colors.hpp"
 #include "patterns.hpp"
 
 namespace gol {
 
 GoL_demo::GoL_demo()
 {
-    this->focus_policy = ox::Focus_policy::Direct;
+    using namespace ox::pipe;
+    *this | direct_focus() | forward_focus(gol_display) |
+        on_focus_in([] { ox::Terminal::set_palette(gol_palette); });
+
     side_panel_accordion.expand();
     side_panel.settings.rule_change.connect(
         [this](std::string const& rule_str) {
