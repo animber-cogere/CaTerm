@@ -9,7 +9,9 @@
 #include <signals_light/signal.hpp>
 
 #include <caterm/painter/color.hpp>
+#include <caterm/widget/array.hpp>
 #include <caterm/widget/layouts/horizontal.hpp>
+#include <caterm/widget/layouts/passive.hpp>
 #include <caterm/widget/layouts/vertical.hpp>
 #include <caterm/widget/pair.hpp>
 #include <caterm/widget/pipe.hpp>
@@ -21,7 +23,6 @@
 #include <caterm/widget/widgets/line.hpp>
 #include <caterm/widget/widgets/number_edit.hpp>
 #include <caterm/widget/widgets/toggle_button.hpp>
-#include "caterm/widget/array.hpp"
 
 namespace graph {
 
@@ -375,11 +376,12 @@ struct Settings : ox::VTuple<ox::Labeled_cycle_box,
     void reset_scale_box();
 };
 
-class Graph_demo : public ox::HPair<Graph_core, ox::Bordered<Settings>> {
+class Graph_demo
+    : public ox::HPair<Graph_core, ox::Passive<ox::Bordered<Settings>>> {
    public:
-    Graph_core& core   = this->first;
-    Settings& settings = this->second | ox::pipe::take_west() |
-                         ox::pipe::fixed_width(25) | ox::pipe::wrapped();
+    Graph_core& core = this->first;
+    Settings& settings =
+        this->second | ox::pipe::take_west() | ox::pipe::wrapped();
 
    public:
     Graph_demo();
