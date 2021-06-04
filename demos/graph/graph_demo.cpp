@@ -9,11 +9,7 @@
 #include <type_traits>
 #include <vector>
 
-#include <caterm/painter/palette/apple_ii.hpp>
 #include <caterm/caterm.hpp>
-#include <caterm/widget/pipe.hpp>
-#include <caterm/widget/widgets/confirm_button.hpp>
-#include <caterm/widget/widgets/toggle_button.hpp>
 
 namespace {
 
