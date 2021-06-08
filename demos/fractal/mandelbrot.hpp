@@ -1,7 +1,6 @@
 #ifndef CATERM_DEMOS_FRACTAL_MANDELBROT_HPP
 #define CATERM_DEMOS_FRACTAL_MANDELBROT_HPP
 #include <complex>
-#include <utility>
 
 #include "float_t.hpp"
 #include "square_sum.hpp"
