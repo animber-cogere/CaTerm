@@ -15,6 +15,7 @@
 #include <caterm/system/system.hpp>
 #include <caterm/widget/detail/link_lifetimes.hpp>
 #include <caterm/widget/pipe.hpp>
+#include <caterm/widget/widgets/label.hpp>
 
 namespace {
 
