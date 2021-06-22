@@ -48,6 +48,9 @@
 #include <caterm/system/shortcuts.hpp>
 #include <caterm/system/system.hpp>
 
+#include <caterm/terminal/key_mode.hpp>
+#include <caterm/terminal/mouse_mode.hpp>
+#include <caterm/terminal/signals.hpp>
 #include <caterm/terminal/terminal.hpp>
 
 #include <caterm/widget/layouts/fixed.hpp>

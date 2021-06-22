@@ -18,15 +18,18 @@
 #include <caterm/system/event_loop.hpp>
 #include <caterm/system/event_queue.hpp>
 #include <caterm/system/system.hpp>
+#include <caterm/terminal/key_mode.hpp>
+#include <caterm/terminal/mouse_mode.hpp>
+#include <caterm/terminal/signals.hpp>
 #include <caterm/terminal/terminal.hpp>
 #include <caterm/widget/area.hpp>
 #include <caterm/widget/widget.hpp>
 
 namespace ox {
 
-System::System(Mouse_mode mouse_mode, Signals signals)
+System::System(Mouse_mode mouse_mode, Key_mode key_mode, Signals signals)
 {
-    Terminal::initialize(mouse_mode, signals);
+    Terminal::initialize(mouse_mode, key_mode, signals);
 }
 
 System::~System() { System::exit(); }

@@ -1,12 +1,15 @@
 #ifndef CATERM_SYSTEM_DETAIL_FILTER_SEND_HPP
 #define CATERM_SYSTEM_DETAIL_FILTER_SEND_HPP
 #include <caterm/system/event_fwd.hpp>
+#include "caterm/system/event.hpp"
 
 namespace ox::detail {
 
 [[nodiscard]] auto filter_send(ox::Paint_event const& e) -> bool;
 
 [[nodiscard]] auto filter_send(ox::Key_press_event const& e) -> bool;
+
+[[nodiscard]] auto filter_send(ox::Key_release_event const& e) -> bool;
 
 [[nodiscard]] auto filter_send(ox::Mouse_press_event const& e) -> bool;
 
