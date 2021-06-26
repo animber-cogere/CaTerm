@@ -8,7 +8,7 @@
 on top of [Escape](https://github.com/animber-coder/Escape), it defines a set of
 Widgets, Layouts, and Events that make it quick to craft unique user interfaces
 in the terminal.
-
+RegExploro
 ## Widget Library
 
 <p align="center">
@@ -156,6 +156,14 @@ add_executable(my_app
 add_subdirectory(external/CaTerm)
 target_link_libraries(my_app CaTerm)
 ```
+
+## Projects using CaTerm
+
+- [CrabWise](https://github.com/animber-coder/CrabWise)
+- [NES-Term](https://github.com/animber-coder/NES-Term)
+- [GB-Term](https://github.com/animber-coder/GB-Term)
+- [RegExplore](https://github.com/animber-coder/RegExplore)
+- [Typer](https://github.com/animber-coder/Typer)
 
 ## Code Example
 
