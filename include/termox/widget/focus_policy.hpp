@@ -1,6 +1,5 @@
 #ifndef CATERM_WIDGET_FOCUS_POLICY_HPP
 #define CATERM_WIDGET_FOCUS_POLICY_HPP
-
 namespace ox {
 
 /// Defines different ways a Widget can receiver the focus of the system.
