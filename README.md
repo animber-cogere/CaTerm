@@ -2,7 +2,7 @@
 [![Read the Manual](https://img.shields.io/badge/-Manual-yellow.svg)](docs/manual/index.md)
 [![Read the Reference](https://img.shields.io/badge/-API%20Reference-blue.svg)](https://animber-coder.github.io/CaTerm/hierarchy.html)
 
-# CaTerm 🐂
+# CaTerm
 
 **CaTerm** is a Terminal User Interface(TUI) Framework written in  C++17. Built
 on top of [Escape](https://github.com/animber-coder/Escape), it defines a set of
