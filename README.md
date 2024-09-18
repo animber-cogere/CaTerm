@@ -410,8 +410,6 @@ examples.
 Reference documentation can be found
 [here](https://animber-coder.github.io/CaTerm/hierarchy.html).
 
-This project was previously named **CPPurses**.
-
 ## License
 
 This software is distributed under the [MIT License](LICENSE.txt).
